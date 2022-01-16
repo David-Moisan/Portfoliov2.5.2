@@ -1,0 +1,74 @@
+@import url("../base.css");
+
+.navbar {
+    width: 13rem;
+    background: var(--backgroundC);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    box-shadow: var(--boxShadow);
+}
+
+.navbar__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.navbar__top > span {
+    font-size: var(--text);
+    color: var(--textMutedC);
+    margin-top: 1rem;
+}
+
+.navbar__link--home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__link--home > span {
+    font-family: var(--BakbakF);
+    font-size: var(--title);
+    color: var(--textC);
+    margin-top: 0.21rem;
+}
+
+.navbar__logo {
+    width: 6rem;
+    height: auto;
+}
+
+.navbar__social {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20rem;
+}
+
+.navbar__link--social {
+    padding: 0.21rem 0.55rem;
+}
+
+.navbar__link--social > i {
+    color: var(--textC);
+    font-size: var(--title);
+    margin-top: 1rem;
+}
+
+.navbar__link--social > i:hover {
+    color: var(--blueLightC);
+    transition: var(--transitionColor);
+}
+
