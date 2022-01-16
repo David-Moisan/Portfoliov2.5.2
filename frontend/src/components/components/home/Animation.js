@@ -28,7 +28,6 @@ let max = 50;
 //declare var
 let time = 0;
 let isPlaying = true;
-console.log(domEl);
 
 function init() {
     //Setup scene
