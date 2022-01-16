@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'django_summernote',
-    'frontend'
+    'frontend',
+    'project',
 ]
 
 MIDDLEWARE = [
