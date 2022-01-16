@@ -1,0 +1,40 @@
+@import url('../base.css');
+
+.scroll-down {
+    position: absolute;
+    right: 0.89rem;
+    bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text);
+    font-weight: 300;
+    -webkit-box-direction:normal;
+    z-index: 50;
+}
+
+.scroll-down span {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    animation: bounce 1s linear infinite;
+}
+
+.scroll-down i {
+    margin-top: 0.89rem;
+    animation: bounce 1s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

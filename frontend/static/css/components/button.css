@@ -1,0 +1,27 @@
+@import url("../base.css");
+
+.button {
+    background: var(--backgroundC);
+    background-size: 0% 100%;
+    color: var(--blueLightC);
+    font-size: var(--btnText);
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 1.1rem;
+    padding: 0.89rem;
+    position: relative;
+    width: 100%;
+    max-width: 16rem;
+    height: 55px;
+    display: inline-block;
+    border: var(--borderBtn);
+    box-shadow: var(--boxShadow);
+    transition: var(--transitionColor);
+}
+
+.button:hover {
+    color: var(--backgroundHoverC);
+    background-color: var(--blueLightC);
+    background-size: 100% 100%;
+}
+

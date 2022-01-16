@@ -63,3 +63,20 @@ ul {
     list-style: none;
 }
 
+.page-inner {
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-page {
+ position: relative;
+ min-height: 100vh;
+ padding-left: 13rem;
+}
+
+.section-full {
+    min-height: 100vh;
+    padding: 0 3.45rem;
+    position: relative;
+    transition: var(--transitionOpacity);
+}
