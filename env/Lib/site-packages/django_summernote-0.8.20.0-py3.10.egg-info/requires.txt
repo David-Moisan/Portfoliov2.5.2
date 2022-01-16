@@ -1,0 +1,7 @@
+django
+bleach
+
+[dev]
+django-dummy-plug
+pytest
+pytest-django
