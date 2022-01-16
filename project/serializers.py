@@ -7,6 +7,7 @@ class LanguageSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class ProjectSerializer(serializers.ModelSerializer):
+    languages = LanguageSerializer(many=True)
     class Meta: 
         model = Project
         fields = '__all__'

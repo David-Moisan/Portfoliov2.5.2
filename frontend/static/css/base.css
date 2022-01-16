@@ -93,3 +93,15 @@ ul {
     position: relative;
     transition: var(--transitionOpacity);
 }
+
+.spinner {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--blueLightC);
+}
+
+.error-cross {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--objectHoverC);
+}

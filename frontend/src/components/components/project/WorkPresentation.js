@@ -3,6 +3,7 @@ import Button from "../Button"
 import AnimLetter from "../../hooks/AnimLetter";
 import { Link } from "react-router-dom"
 import BigBackgroundFont from "../../hooks/BigBackgroundFont";
+import ProjectListPage from "./ProjectListPage";
 
 export default function WorkPresentation() {
   return (
@@ -39,7 +40,7 @@ export default function WorkPresentation() {
             <Button route="/project" text="See more !" />
         </div>
       </div>
-      {/* ProjectList */}
+      <ProjectListPage />
     </section>
   );
 }
