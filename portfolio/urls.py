@@ -8,8 +8,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('api/auth', include('rest_framework.urls')),
     path('summernote', include('django_summernote.urls')),
-    path('', include('frontend.urls')),
     path('api/project/', include('project.urls')),
+    path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
