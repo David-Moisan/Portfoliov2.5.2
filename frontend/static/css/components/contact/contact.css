@@ -1,0 +1,159 @@
+@import url('../../base.css');
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact__block--text {
+    width: 50%;
+    padding-right: 5rem;
+}
+
+.contact__block--text header {
+    position: relative;
+}
+
+.contact__block--text p {
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-size: var(--text);
+}
+
+.contact__block--text + div {
+    position: absolute !important;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.contact__form {
+    width: 100%;
+    padding-top: 2.5rem;
+    display: block;
+    position: relative;
+}
+
+.contact__form form {
+    position: relative;
+}
+
+.contact__form ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contact__form ul li.half:first-child {
+    margin-left: 0;
+}
+
+.contact__form ul li.half {
+    width: 49%;
+    margin-left: 2%;
+    float: left;
+    clear: none;
+}
+
+.contact__form ul li {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.89rem;
+    overflow: hidden;
+    opacity: 0;
+    display: block;
+    position: relative;
+    clear: both;
+}
+
+.fadeAnim {
+    animation: fade 1s both;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.contact__form input[type="text"],
+.contact__form input[type="email"] {
+    width: 100%;
+    border: 0;
+    background: var(--backgroundHoverC);
+    height: 55px;
+    font-size: var(--text);
+    color: var(--textMutedC);
+    padding: 0 21px;
+    box-sizing: border-box;
+}
+
+.input__label--color::before,
+.input__label--color::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.input__label--color::after {
+    margin-top: 2px;
+    border-bottom: 2px solid var(--blueLightC);
+    transform: translate3d(-100%, 0, 0);
+    transition: transform .21s;
+}
+
+.input__label--color2::after {
+    border-color: var(--blueLightC);
+}
+
+.contact__form textarea {
+    width: 100%;
+    border: 0;
+    background: var(--backgroundHoverC);
+    height: 50px;
+    font-size: var(--text);
+    color: var(--textMutedC);
+    padding: 21px;
+    box-sizing: border-box;
+    min-height: 150px;
+}
+
+.contact__map {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contact__map--info {
+    position: absolute;
+    background: var(--backgroundHoverC);
+    top: 50px;
+    left: 5rem;
+    z-index: 1000;
+    width: 266px;
+    padding: 21px;
+    color: var(--textC);
+    font-size: var(--text);
+    font-weight: 300;
+}
+
+.contact__map--info span {
+    font-size: 1rem;
+}
+
+.contact__map--info span i {
+    color: var(--objectC);
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/base.css" %}">
     <link rel="stylesheet" href="{% static "css/hooks/anim-letter.css" %}">
+    <link rel="stylesheet" href="{% static "css/hooks/big-background.css" %}">
     <link rel="stylesheet" href="{% static "css/components/navbar.css" %}">
     <link rel="stylesheet" href="{% static "css/components/menu.css" %}">
     <link rel="stylesheet" href="{% static "css/components/scroll-down.css" %}">
     <link rel="stylesheet" href="{% static "css/components/button.css" %}">
     <link rel="stylesheet" href="{% static "css/components/home/home.css" %}">
+    <link rel="stylesheet" href="{% static "css/components/project/work.css" %}">
+    <link rel="stylesheet" href="{% static "css/components/about/about.css" %}">
+    <link rel="stylesheet" href="{% static "css/components/blog/blog.css" %}">
+    <link rel="stylesheet" href="{% static "css/components/contact/contact.css" %}">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +36,7 @@
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 </head>
+
 <body>
     <div id="root"></div>
 
@@ -37,5 +44,48 @@
     <script src="https://kit.fontawesome.com/4d13782961.js" crossorigin="anonymous"></script>
     <!-- Script -->
     <script src="{% static "frontend/main.js" %}"></script>
+    <!-- Tag Cloud -->
+    <script>
+        const texts = [
+            "HTML",
+            "CSS",
+            "Javascript",
+            "PHP",
+            "Symfony",
+            "Twig",
+            "Three.js",
+            "React",
+            "Python",
+            "Django",
+            "3D",
+            "Blender",
+            "C#",
+            "Unity",
+            "Rest API",
+            "MySQL",
+            "GLSL",
+            "VSCode",
+            "Git",
+            "Leaflet.js",
+            "Chart.js",
+            "npm",
+            "webpack",
+            "babel",
+            "firebase",
+        ];
+
+        let container = document.getElementById("skill");
+
+        let options = {
+            radius: 360,
+            maxSpeed: "fast",
+            initSpeed: "fast",
+            direction: 135,
+            keep: true,
+        };
+
+        TagCloud(container, texts, options)
+    </script>
 </body>
+
 </html>

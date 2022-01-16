@@ -1,0 +1,20 @@
+@import url('../../base.css');
+
+.blog__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.89rem;
+}
+
+.blog__footer--link {
+    display: flex;
+    align-items: center;
+    color: var(--blueLightC);
+}
+
+.blog__footer--link:hover {
+    color: var(--blueC);
+    text-decoration: underline;
+    transition: var(--allIn);
+}
