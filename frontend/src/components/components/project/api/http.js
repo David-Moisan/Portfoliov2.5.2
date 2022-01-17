@@ -19,24 +19,3 @@ export const loadProjectFromAPI = () => {
         }
     })
 }
-
-/**
- * Récupère spécifiquement via l'id le détail d'un projet 
- * @param {int} id 
- * @returns fetching specific data
- */
-export const loadDetailProjectFromAPI = (id) => {
-    return fetch(`${API_URL}?id=eq.${id}`, {
-        method: "GET",
-        headers: {
-            "Content-Type":"application/json"
-        },
-        body: JSON.stringify()
-    }).then((response) => {
-        if(response.ok) {
-            return response.json()
-        } else {
-            console.log("This project don't exist !");
-        }
-    })
-}

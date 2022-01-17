@@ -1,0 +1,105 @@
+@import url('../../base.css');
+
+.case__project {
+    margin-left: 3rem;
+}
+
+.case__project--back {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.case__project--back a {
+    color: var(--blueLightC);
+    font-size: var(--title);
+}
+
+.case__project--back a:hover {
+    color: var(--blueC);
+    text-decoration: underline;
+    transition: var(--allIn);
+}
+
+.case__project--back a i {
+    margin-right: 0.55rem;
+}
+
+.case__project--wrapper {
+    margin-top: 6.25rem;
+    margin-bottom: 3.13rem;
+    min-height: calc(100vh - 7.81rem);
+    width: 80%;
+}
+
+.case__project--title {
+    margin-bottom: 3.13rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--backgroundHoverC);
+    border-radius: var(--borderRadius);
+    padding: 1.25rem;
+}
+
+.case__project--title h1 {
+    margin-bottom: 1.25rem;
+    line-height: 4.38rem;
+    font-size: 3rem;
+    color: var(--objectC);
+}
+
+.case__project--link {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.case__project--link a {
+    color: var(--textC);
+    cursor: pointer;
+    margin: 0;
+    padding: 0.89rem;
+}
+
+.case__info {
+    margin-bottom: 4.38rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    background-color: var(--backgroundHoverC);
+    padding: 1.25rem;
+    border-radius: var(--borderRadius);
+}
+
+
+.case__content h1 {
+    color: var(--blueC);
+    font-size: var(--title);
+}
+
+.case__content span {
+    color: var(--textC) !important;
+    font-size: var(--text);
+}
+
+.case__content p {
+    margin-bottom: 1.25rem !important;
+    color: var(--textC) !important;
+}
+
+.case__thumbnails {
+    width: 100%;
+    margin: 0.89rem 0;
+    position: relative;
+}
+
+.case__thumbnails img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

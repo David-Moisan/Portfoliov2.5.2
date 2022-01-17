@@ -7,6 +7,7 @@ import About from './components/About'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
 import ProjectListPage from './components/project/ProjectListPage'
+import DetailProjectPage from './components/project/DetailProjectPage'
 
 export default class App extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
                     <Routes>
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="/project" element={<ProjectListPage/>} />
+                        <Route path="/project/:id" element={<DetailProjectPage/>} />
                         <Route path="/about" element={<About />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/contact" element={<Contact />} />
