@@ -1,43 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AnimLetter from "../../../hooks/AnimLetter";
 
 export default function ProjectList(props) {
   return (
-    <section className="projects">
-      <ul className="projects__list">
-        {props.project.slice(0,4).map((project, index) => (
-          <li className="project__item" key={index} id={project.id}>
-            <div className="project__content">
+    <section className="all-projects">
+      <h1 className="all-projects__head">
+        <AnimLetter letter="A" />
+        <AnimLetter letter="l" />
+        <AnimLetter letter="l" />
+        <span className="animation__space"></span>
+        <AnimLetter letter="p" />
+        <AnimLetter letter="r" />
+        <AnimLetter letter="o" />
+        <AnimLetter letter="j" />
+        <AnimLetter letter="e" />
+        <AnimLetter letter="c" />
+        <AnimLetter letter="t" />
+        <AnimLetter letter="s" />
+      </h1>
+      <ul className="all-projects__list">
+        {props.project.map((project, index) => (
+          <li className="all-projects__item" key={index} id={project.id}>
+            <div className="all-projects__content">
               <div>
-                <h2 className="project__title">{project.title}</h2>
-                <div className="project__description">
+                <h2 className="all-projects__title">{project.title}</h2>
+                <div className="all-projects__description">
                   <p>{project.description}</p>
                 </div>
-                <div className="project__link">
+                <div className="all-projects__link">
                   <Link
                     to={`/project/${project.id}`}
-                    className="project__detail--view"
+                    className="all-projects__detail--view"
                   >
                     Case study
                   </Link>
-                  <a href={project.link} className="project__github--link">
+                  <a href={project.link} className="all-projects__github--link">
                     <i className="fab fa-github fa-2x"></i>
                   </a>
                 </div>
-                <ul className="project__languages">
+                <ul className="all-projects__languages">
                   {project.languages.map((lang, index) => (
                     <li key={index}>{lang.name}</li>
                   ))}
                 </ul>
               </div>
             </div>
-            <div className="project__image">
+            <div className="all-projects__image">
               <Link
                 to={`/project/${project.id}`}
-                className="project__detail--view"
+                className="all-projects__detail--view"
               >
-                <div className="project__image--block">
-                  <div className="project__image--wrapper">
+                <div className="all-projects__image--block">
+                  <div className="all-projects__image--wrapper">
                     <img src={project.thumbnails} alt={project.title} />
                   </div>
                 </div>
