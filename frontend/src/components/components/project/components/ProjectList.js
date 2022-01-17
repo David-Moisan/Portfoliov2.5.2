@@ -5,7 +5,7 @@ export default function ProjectList(props) {
   return (
     <section className="projects">
       <ul className="projects__list">
-        {props.project.map((project, index) => (
+        {props.project.slice(0,4).map((project, index) => (
           <li className="project__item" key={index} id={project.id}>
             <div className="project__content">
               <div>
@@ -25,7 +25,9 @@ export default function ProjectList(props) {
                   </a>
                 </div>
                 <ul className="project__languages">
-                    {/* Languages */}
+                  {project.languages.map((lang, index) => (
+                    <li key={index}>{lang.name}</li>
+                  ))}
                 </ul>
               </div>
             </div>
