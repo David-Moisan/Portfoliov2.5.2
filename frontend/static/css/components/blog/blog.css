@@ -55,6 +55,11 @@
     max-width: 100%;
 }
 
+.blog__post--thumbnails img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 .blog__footer {
     display: flex;
     align-items: center;
@@ -74,3 +79,28 @@
     text-decoration: underline;
     transition: var(--allIn);
 }
+
+
+/* selector of ListBlogPost */
+
+.page-blog__container {
+    max-width: 90rem;
+    margin-left: 5rem;
+}
+
+.page-blog__header {
+    text-align: center;
+    padding: 3rem 3rem;
+}
+
+.page-blog__header .widget h6 {
+    font-family: var(--BakbakF);
+    font-size: var(--title);
+    color: var(--blueLightC);
+    font-weight: normal;
+    text-transform: lowercase;
+    margin: 0 0 2.19rem;
+    padding: 0;
+} 
+
+

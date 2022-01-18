@@ -4,10 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from './hooks/Layout'
 import HomePage from './pages/HomePage'
 import About from './components/About'
-import Blog from './components/Blog'
+import BlogListPage from './components/blog/BlogListPage'
 import Contact from './components/Contact'
 import ProjectListPage from './components/project/ProjectListPage'
 import DetailProjectPage from './components/project/DetailProjectPage'
+
 
 export default class App extends Component {
     render() {
@@ -19,7 +20,7 @@ export default class App extends Component {
                         <Route path="/project" element={<ProjectListPage/>} />
                         <Route path="/project/:id" element={<DetailProjectPage/>} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/blog" element={<BlogListPage />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </Layout>
