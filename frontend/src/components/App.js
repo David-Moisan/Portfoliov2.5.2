@@ -8,6 +8,7 @@ import BlogListPage from './components/blog/BlogListPage'
 import Contact from './components/Contact'
 import ProjectListPage from './components/project/ProjectListPage'
 import DetailProjectPage from './components/project/DetailProjectPage'
+import DetailBlogPostPage from './components/blog/DetailBlogPostPage'
 
 
 export default class App extends Component {
@@ -21,6 +22,7 @@ export default class App extends Component {
                         <Route path="/project/:id" element={<DetailProjectPage/>} />
                         <Route path="/about" element={<About />} />
                         <Route path="/blog" element={<BlogListPage />} />
+                        <Route path="/blog/:id" element={<DetailBlogPostPage />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </Layout>
