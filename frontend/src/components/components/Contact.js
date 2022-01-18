@@ -2,10 +2,12 @@ import React from "react";
 import Form from "./Form"
 import Map from "./Map"
 import AnimLetter from "../hooks/AnimLetter";
+import BigBackgroundFont from "../hooks/BigBackgroundFont";
 
 export default function Contact() {
   return (
     <section className="contact section-full" id="contact">
+      <BigBackgroundFont text="@" />
       <div className="contact__block--text">
         <header>
           <h2 className="header__title">
