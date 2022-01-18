@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "unresolved-import",
+        "./env/Lib/site-packages"
+    ]
+}
