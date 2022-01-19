@@ -13,4 +13,4 @@ class ProjectAdmin(SummernoteModelAdmin):
     list_display = ['title', 'created_at']
     list_display_links = ['title']
     search_fields = ['title', 'languages', 'created_at']
-    summernote_field = ('content', )
+    summernote_fields = ('content',)

@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import BlogPost, Categories
 from django_summernote.admin import SummernoteModelAdmin
-
 @admin.register(Categories)
 class CategoriesAdmin(admin.ModelAdmin):
     list_display = ['name']
@@ -14,5 +13,5 @@ class BlogPostAdmin(SummernoteModelAdmin):
     list_display_links = ['title']
     search_fields = ['title', 'created_at', 'category']
     list_per_page = 25   
-    summernote_field = ('content', )
+    summernote_fields = ('content',)
 

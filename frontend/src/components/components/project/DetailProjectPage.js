@@ -48,6 +48,7 @@ export default function DetailProjectPage() {
         <section>
           <div className="case__project--title">
             <h1>{project.title}</h1>
+            <p className="case__project--date">{project.month} - {project.day}</p>
             <div className="case__project--link">
               <a target="_blank" href={project.link}>
                 <i className="fab fa-github fa-2x"></i>
