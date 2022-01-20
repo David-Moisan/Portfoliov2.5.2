@@ -123,6 +123,13 @@
 .case__content h2,
 .blog__content h2 {
     color: var(--blueC);
+    font-size: var(--title);
+}
+
+.case__content h5,
+.blog__content h5 {
+ color: var(--blueC);
+ font-size: var(--subtitle);
 }
 
 .case__content h6, 
