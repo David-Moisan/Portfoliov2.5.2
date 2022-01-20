@@ -3,7 +3,7 @@ import Button from "./Button"
 
 export default function Form() {
   return (
-    <form id="form-contact" autoComplete="off">
+    <form id="form-contact" action="" method="POST" autoComplete="off">
       <ul>
         <li className="half fadeAnim">
           <input
@@ -40,7 +40,7 @@ export default function Form() {
           ></textarea>
           <label className="input__label input__label--color input__label--color2"></label>
         </li>
-        <Button text="Send message !" className="fadeAnim" route="/contact" />
+        <Button text="Send message !" className="fadeAnim" route="/contact" type="submit" />
       </ul>
     </form>
   );
