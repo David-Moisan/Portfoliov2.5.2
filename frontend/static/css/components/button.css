@@ -1,6 +1,7 @@
 @import url("../base.css");
 
-.button {
+.button,
+.submit-btn {
     background: var(--backgroundC);
     background-size: 0% 100%;
     color: var(--blueLightC);
@@ -17,9 +18,11 @@
     border: var(--borderBtn);
     box-shadow: var(--boxShadow);
     transition: var(--transitionColor);
+    cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.submit-btn:hover {
     color: var(--backgroundHoverC);
     background-color: var(--blueLightC);
     background-size: 100% 100%;

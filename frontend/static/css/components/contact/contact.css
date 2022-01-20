@@ -158,3 +158,17 @@
     color: var(--objectC);
 }
 
+.error-msg {
+    font-size: 0.55rem;
+    color: var(--objectHoverC);
+}
+
+.message-success {
+    margin-bottom: 1.5rem;
+    color: var(--objectC);
+    font-size: var(--text);
+}
+
+/* ! Pour le bouton submit se référé au fichier button.css, Afin d'éviter les doublons */
+
+
