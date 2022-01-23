@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "./Form"
 import Map from "./Map"
 import AnimLetter from "../hooks/AnimLetter";
 import BigBackgroundFont from "../hooks/BigBackgroundFont";
+import Button from "./Button";
 
 export default function Contact() {
   return (
@@ -28,7 +28,7 @@ export default function Contact() {
           </p>
         </header>
         <div className="contact__form">
-            <Form />
+          <a href="mailto:davprocode@gmail.com" className="submit-btn">Send !</a>
         </div>
       </div>
       <div className="contact__map">

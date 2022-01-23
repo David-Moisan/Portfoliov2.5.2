@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'frontend',
     'project',
     'blog',
-    'contact',
 ]
 
 MIDDLEWARE = [
@@ -140,13 +139,3 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs5'
 
 CORS_ORIGIN_ALLOW_ALL = True
-
-#Parameters for send an emails with Django 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'davprocode@gmail.com'
-EMAIL_HOST_PASSWORD = 'Dastreet07*'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
