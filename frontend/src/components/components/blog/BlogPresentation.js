@@ -42,7 +42,7 @@ export default function BlogPresentation() {
                             <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
                         </h5>
                     </div>
-                    <div className="blog__post--content">{blog.description}</div>
+                    <div className="blog__post--description">{blog.description}</div>
                 </div>
             </article>
         ))}

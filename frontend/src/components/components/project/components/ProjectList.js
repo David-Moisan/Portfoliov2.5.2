@@ -18,7 +18,7 @@ export default function ProjectList(props) {
         <AnimLetter letter="c" />
         <AnimLetter letter="t" />
         <AnimLetter letter="s" />
-      </h1>
+      </h1> 
       <ul className="all-projects__list">
         {props.project.map((project, index) => (
           <li className="all-projects__item" key={index} id={project.id}>

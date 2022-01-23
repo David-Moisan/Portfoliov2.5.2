@@ -1,25 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../Button";
+import BigBackgroundFont from "../../../hooks/BigBackgroundFont";
 
 export default function ListBlogPost(props) {
   return (
     <section className="blog section-full" id="blog-all">
       <div className="page-blog__container">
-        <div className="page-blog__header">
-          <div className="widget widget__categories">
-            <h6>Categories</h6>
-            <ul></ul>
-          </div>
-          <br />
-        </div>
         <div className="blog__articles">
+          <BigBackgroundFont text="Blog" />
           <div className="posts">
             <div className="blog__articles" data-columns="3">
-              {props.blog.map((blog, index) => (
+              {props.blog.map((blog) => (
                 <article
                   className="blog__post"
-                  key={index}
+                  key={blog.id}
                   style={{
                     borderTop:
                       "2px solid" + blog.category.map((item) => item.color),

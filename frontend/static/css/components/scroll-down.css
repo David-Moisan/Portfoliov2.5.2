@@ -1,5 +1,11 @@
 @import url('../base.css');
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .scroll-down {
+        bottom: 5rem !important;
+    }
+}
+
 .scroll-down {
     position: absolute;
     right: 0.89rem;

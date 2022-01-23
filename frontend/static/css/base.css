@@ -26,6 +26,11 @@
     --text: 1.1rem;
     --btnText: 1.1rem;
 
+    --respTitle: 1rem;
+    --respSubtitle: 0.89rem;
+    --respText: 0.55rem;
+    --respBtnText: 0.55rem; 
+
     /*!SHADOWS*/
     --boxShadow: 5px 8px 13px 3px rgb(20,20,20);
 
@@ -76,6 +81,11 @@ ul {
     z-index: -1;
 }
 
+#container canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
 .page-inner {
     width: 100vw;
     height: 100vh;
@@ -105,3 +115,58 @@ ul {
     font-size: 2rem;
     color: var(--objectHoverC);
 }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .full-page {
+        padding-left: 0 !important;
+    }
+
+    .section-full {
+        padding: 0 1rem !important;
+        min-height: 50vh !important;
+    }
+
+    .section-full.contact {
+        min-height: 55vh !important;
+    }
+}
+
+/*! MEDIA QUERIES */
+/*
+iPhone XR, Xs Max = {
+width: 414,
+height: 896,
+}
+
+iPhone XS, X = {
+width: 375,
+height: 812,
+}
+
+Galaxy S9 Plus, S8 Plus = {
+width: 412,
+height: 846,
+}
+
+Galaxy S9, S8, Note 8 = {
+width: 360,
+height: 740,
+}
+
+
+Pixel 3, 3 XL = {
+width: 393,
+height: 786,
+}
+
+
+Medium Screen = {
+width: 1024
+height: 800
+}
+
+Large Screen = {
+width: 1280,
+height: 800
+}
+*/

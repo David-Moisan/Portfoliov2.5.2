@@ -29,8 +29,8 @@ export default function WorkPresentation() {
 
   return (
     <section className="work section-full" id="work">
+      <BigBackgroundFont text="Work" />
       <div className="work__block--text">
-        <BigBackgroundFont text="Work" />
         <div>
           <header className="work__block--header">
             <h2 className="header__title">

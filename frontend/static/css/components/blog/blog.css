@@ -1,5 +1,15 @@
 @import url('../../base.css');
 
+@media only screen and (min-width: 320px) and (max-width: 959px) {
+    .blog__articles .blog__post {
+        width: 100% !important;
+    }
+
+    .blog__post--description {
+        display: none !important;
+    }
+}
+
 .blog__articles {
     display: flex;
     flex-wrap: wrap;
@@ -85,24 +95,9 @@
 
 .page-blog__container {
     max-width: 90rem;
+    margin-top: 5rem;
     margin-left: 5rem;
 }
-
-.page-blog__header {
-    text-align: center;
-    padding: 3rem 3rem;
-}
-
-.page-blog__header .widget h6 {
-    font-family: var(--BakbakF);
-    font-size: var(--title);
-    color: var(--blueLightC);
-    font-weight: normal;
-    text-transform: lowercase;
-    margin: 0 0 2.19rem;
-    padding: 0;
-} 
-
 
 
 /**

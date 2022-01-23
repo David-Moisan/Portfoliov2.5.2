@@ -1,37 +1,28 @@
 @import url("../../base.css");
 
-@media only screen and (min-width: 320px) and (max-width: 959px) {
-    #skill {
-        display: none !important;
-    }
-
-    .about__block--text {
-        width: 100% !important;
-    }
+/**Prend le dessus quand on clique sur la page about */
+.about-page {
+    margin: 0 auto;
+    padding: 5rem 0;
+    max-width: 62.5rem;
 }
 
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.about__block--text {
+.about-page__text {
     width: 40%;
 }
 
-.about__block--text header {
+.about-page__text header {
     position: relative;
 }
 
-.about__block--text p {
+.about-page__text p {
     position: relative;
     margin-bottom: 1.5rem;
     line-height: 1.5;
     font-size: var(--text);
 }
 
-.skill-zone {
+.about-page__skill {
     width: 60%;
     flex: 1 1 auto;
     position: absolute;
@@ -40,12 +31,15 @@
     bottom: 0;
 }
 
-#skill {
+.about-page__skill #skill {
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--blueLightC);
+}
+
+.about-page > .scroll-down {
+    display: none;
 }

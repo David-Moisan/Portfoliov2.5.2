@@ -1,12 +1,13 @@
-import React from "react";
-import AnimLetter from "../hooks/AnimLetter";
-import ScrollDown from "./ScrollDown";
+import React from 'react';
+import AnimLetter from '../../hooks/AnimLetter';
+import ScrollDown from '../ScrollDown';
 
-export default function About() {
+
+export default function AboutPage() {
   return (
-    <section className="about section-full about-page" id="about">
+    <section className="section-full about-page" id="about">
       <ScrollDown />
-      <div className="about__block--text about-page__text">
+      <div className="about-page__text">
         <header>
           <h2 className="header__title">
             <AnimLetter letter="M" />
