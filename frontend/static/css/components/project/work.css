@@ -65,6 +65,11 @@
     color: var(--objectC);
 }
 
+.work__block--header p>.header__text--link:hover {
+    color: var(--objectHoverC);
+    transition: var(--transitionColor);
+}
+
 
 /* ListProject Style */
 

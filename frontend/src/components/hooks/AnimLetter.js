@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function AnimLetter({letter}) {
-    return (
-        <span className='animation__letter'>
-            {letter}
-        </span>
-    )
+export default function AnimLetter({ letter }) {
+  return <span className="animation__letter">{letter}</span>;
 }

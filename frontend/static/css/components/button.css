@@ -18,7 +18,6 @@
     border: var(--borderBtn);
     box-shadow: var(--boxShadow);
     transition: var(--transitionColor);
-    cursor: pointer;
 }
 
 .button:hover,

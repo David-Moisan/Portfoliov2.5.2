@@ -12,7 +12,7 @@ export default function About() {
       id="about"
     >
       <ScrollDown />
-      <div className="about__block--text about-page__text">
+      <div className="about__block--text about-page__text" data-aos="fade-right">
         <header>
           <h2 className="header__title">
             <AnimLetter letter="M" />
@@ -38,7 +38,7 @@ export default function About() {
           </p>
         </header>
       </div>
-      <div className="skill-zone about-page__skill">
+      <div className="skill-zone about-page__skill" data-aos="fade-left">
         <Cloud />
       </div>
     </section>
