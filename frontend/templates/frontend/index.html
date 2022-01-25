@@ -33,13 +33,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:wght@100;300;400;700;900&family=Smooch&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script><!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:wght@100;300;400;700;900&family=Smooch&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
@@ -51,52 +46,11 @@
     <script src="https://kit.fontawesome.com/4d13782961.js" crossorigin="anonymous"></script>
     <!-- Script -->
     <script src="{% static "frontend/main.js" %}"></script>
+    <!-- Tag Cloud -->
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
-    <!-- Tag Cloud -->
-    <script>
-        const texts = [
-            "HTML",
-            "CSS",
-            "Javascript",
-            "PHP",
-            "Symfony",
-            "Twig",
-            "Three.js",
-            "React",
-            "Python",
-            "Django",
-            "3D",
-            "Blender",
-            "C#",
-            "Unity",
-            "Rest API",
-            "MySQL",
-            "GLSL",
-            "VSCode",
-            "Git",
-            "Leaflet.js",
-            "Chart.js",
-            "npm",
-            "webpack",
-            "babel",
-            "firebase",
-        ];
-
-        let container = document.getElementById("skill");
-
-        let options = {
-            radius: 360,
-            maxSpeed: "fast",
-            initSpeed: "fast",
-            direction: 135,
-            keep: true,
-        };
-
-        TagCloud(container, texts, options)
     </script>
 </body>
 

@@ -34,16 +34,13 @@
 .skill-zone {
     width: 60%;
     flex: 1 1 auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
 }
 
-#skill {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.skill-zone #skill {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;

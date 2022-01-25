@@ -5,7 +5,7 @@ import ScrollDown from '../ScrollDown';
 
 export default function AboutPage() {
   return (
-    <section className="section-full about-page" id="about">
+    <section className="section-full about-page">
       <ScrollDown />
       <div className="about-page__text">
         <header>

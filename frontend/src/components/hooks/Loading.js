@@ -9,7 +9,7 @@ const Loading = () => {
         alt="logo-loading"
         className="logo-loading"
       />
-      <ReactLoading type="bubbles" color="#5aa9bf" />
+      <ReactLoading type="bubbles" color="#ffffff" />
     </div>
   );
 };

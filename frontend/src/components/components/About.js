@@ -1,10 +1,16 @@
 import React from "react";
 import AnimLetter from "../hooks/AnimLetter";
 import ScrollDown from "./ScrollDown";
+import { useMediaQuery } from "react-responsive";
+import Cloud from "../hooks/Cloud";
 
 export default function About() {
+  const isTablet = useMediaQuery({ maxWidth: 768 });
   return (
-    <section className="about section-full about-page" id="about">
+    <section
+      className={isTablet ? "about-page section-full" : "about section-full"}
+      id="about"
+    >
       <ScrollDown />
       <div className="about__block--text about-page__text">
         <header>
@@ -33,7 +39,7 @@ export default function About() {
         </header>
       </div>
       <div className="skill-zone about-page__skill">
-        <div id="skill"></div>  
+        <Cloud />
       </div>
     </section>
   );
