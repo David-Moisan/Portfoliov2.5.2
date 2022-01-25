@@ -1,0 +1,34 @@
+@import url("../base.css");
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logo-loading {
+    animation: flow 1s 0.21s;
+    width: 6rem;
+    height: 6rem;
+}
+
+@keyframes flow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(144px);
+        transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    100% {
+        transform: translateY(3px);
+        transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
