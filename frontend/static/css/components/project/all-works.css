@@ -15,6 +15,11 @@
         justify-content: center !important;
         flex-direction: column !important;
     }
+
+    .all-projects__content {
+        background-color: var(--backgroundC) !important;
+        box-shadow: var(--boxShadow) !important;
+    }
 }
 
 .all-projects {
