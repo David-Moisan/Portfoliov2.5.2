@@ -30,7 +30,7 @@ export default function WorkPresentation() {
   return (
     <section className="work section-full" id="work">
       <BigBackgroundFont text="Work" />
-      <div className="work__block--text">
+      <div className="work__block--text" data-aos="fade-right">
         <div>
           <header className="work__block--header">
             <h2 className="header__title">
@@ -64,7 +64,7 @@ export default function WorkPresentation() {
       <section className="projects">
         <ul className="projects__list">
           {project.slice(0, 4).map((project, index) => (
-            <li className="project__item" key={index} id={project.id}>
+            <li className="project__item" key={index} id={project.id} data-aos="fade-left">
               <div className="project__content">
                 <div>
                   <h2 className="project__title">{project.title}</h2>

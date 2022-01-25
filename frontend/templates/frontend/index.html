@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static "css/base.css" %}">
     <link rel="stylesheet" href="{% static "css/hooks/anim-letter.css" %}">
     <link rel="stylesheet" href="{% static "css/hooks/big-background.css" %}">
+    <link rel="stylesheet" href="{% static "css/hooks/loading.css" %}">
     <link rel="stylesheet" href="{% static "css/components/navbar.css" %}">
     <link rel="stylesheet" href="{% static "css/components/menu.css" %}">
     <link rel="stylesheet" href="{% static "css/components/scroll-down.css" %}">
@@ -39,6 +40,7 @@
         href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:wght@100;300;400;700;900&family=Smooch&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -49,6 +51,11 @@
     <script src="https://kit.fontawesome.com/4d13782961.js" crossorigin="anonymous"></script>
     <!-- Script -->
     <script src="{% static "frontend/main.js" %}"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Tag Cloud -->
     <script>
         const texts = [

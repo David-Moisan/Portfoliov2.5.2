@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <>
       <BigBackgroundFont text="@" />
-      <section className="contact-page section-full" id="contact">
+      <section className="contact-page section-full" id="contact" data-aos="fade-right">
         <div className="contact-page__text">
           <header>
             <h2 className="header__title">

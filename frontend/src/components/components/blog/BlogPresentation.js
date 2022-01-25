@@ -30,7 +30,7 @@ export default function BlogPresentation() {
     <section className="blog section-full" id="blog">
       <BigBackgroundFont text="Blog" />
       <ScrollDown />
-      <div className="blog__articles">
+      <div className="blog__articles" data-aos="fade-up">
         {blog.slice(0, 6).map((blog) => (
             <article className="blog__post" key={blog.id} style={{borderTop: "2px solid" + blog.category.map((item)=> item.color)}}>
                 <div className="blog__post--category" style={{ color: blog.category.map((item)=> item.color)}}>

@@ -8,7 +8,7 @@ export default function HomePresentation() {
     return (
         <>
             <section className='home section-full' id='home-section'>
-                <div className='home__block--text'>
+                <div className='home__block--text' data-aos="fade-right">
                     <h1 className='home__block--title' aria-label="Hi, I'm David, web developer">
                         <AnimLetter letter="H" />
                         <AnimLetter letter="i" />
