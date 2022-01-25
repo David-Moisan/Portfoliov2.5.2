@@ -1,12 +1,16 @@
 @import url('../../base.css');
 
-@media only screen and (min-width: 320px) and (max-width: 959px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
     .blog__articles .blog__post {
         width: 100% !important;
     }
 
     .blog__post--description {
         display: none !important;
+    }
+
+    .blog__articles {
+        padding: 0 !important;
     }
 }
 
@@ -92,6 +96,12 @@
 
 
 /* selector of ListBlogPost */
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .page-blog__container {
+        margin-left: 0 !important;
+    }
+}
 
 .page-blog__container {
     max-width: 90rem;
