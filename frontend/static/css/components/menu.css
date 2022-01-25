@@ -42,3 +42,13 @@
     color: var(--blueLightC);
     transition: var(--allOut);
 }
+
+.mobile-icons {
+    font-size: var(--subtitle);
+
+}
+
+.mobile-icons:hover {
+    color: var(--blueLightC);
+    transition: var(--transitionColor);
+}
