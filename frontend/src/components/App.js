@@ -3,12 +3,12 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./hooks/Layout";
 import HomePage from "./pages/HomePage";
-import BlogListPage from "./components/blog/BlogListPage";
-import ProjectListPage from "./components/project/ProjectListPage";
-import DetailProjectPage from "./components/project/DetailProjectPage";
-import DetailBlogPostPage from "./components/blog/DetailBlogPostPage";
-import AboutPage from "./components/about/AboutPage";
-import ContactPage from "./components/contact/ContactPage";
+import BlogListPage from "./pages/BlogListPage";
+import ProjectListPage from "./pages/ProjectListPage";
+import DetailProjectPage from "./pages/DetailProjectPage";
+import DetailBlogPostPage from "./pages/DetailBlogPostPage";
+import ContactPage from "./pages/ContactPage";
+import About from "./components/About";
 
 export default class App extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class App extends Component {
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/project" element={<ProjectListPage />} />
                 <Route path="/project/:id" element={<DetailProjectPage />} />
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/blog" element={<BlogListPage />} />
                 <Route path="/blog/:id" element={<DetailBlogPostPage />} />
                 <Route path="/contact" element={<ContactPage />} />

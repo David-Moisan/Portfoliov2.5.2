@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { loadBlogPostFromAPI } from "./api/http";
-import ListBlogPost from "./components/ListBlogPost";
+import { loadBlogPostFromAPI } from "../components/blog/api/http";
+import ListBlogPost from "../components/blog/components/ListBlogPost";
 
 export default function BlogListPage() {
   const [blog, setBlog] = useState([]);

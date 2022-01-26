@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { loadProjectFromAPI } from "./api/http";
-import ProjectList from "./components/ProjectList";
+import { loadProjectFromAPI } from "../components/project/api/http";
+import ProjectList from "../components/project/components/ProjectList";
 
 export default function ProjectListPage() {
   const [project, setProject] = useState([]);
