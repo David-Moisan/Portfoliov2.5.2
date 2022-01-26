@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../hooks/BigBackgroundFont";
+import useCursorHandler from "../../hooks/useCursorHandler";
 import ScrollDown from "../ScrollDown";
 import { loadBlogPostFromAPI } from "./api/http";
 
 export default function BlogPresentation() {
+  const cursorHandlers = useCursorHandler();
   const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,7 +41,7 @@ export default function BlogPresentation() {
                 <div className="blog__post--content">
                     <div className="blog__post--title">
                         <h5>
-                            <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                            <Link to={`/blog/${blog.slug}`} {...cursorHandlers}>{blog.title}</Link>
                         </h5>
                     </div>
                     <div className="blog__post--description">{blog.description}</div>

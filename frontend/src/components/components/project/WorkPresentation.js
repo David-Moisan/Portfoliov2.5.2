@@ -4,8 +4,10 @@ import AnimLetter from "../../hooks/AnimLetter";
 import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../hooks/BigBackgroundFont";
 import { loadProjectFromAPI } from "./api/http";
+import useCursorHandler from "../../hooks/useCursorHandler";
 
 export default function WorkPresentation() {
+  const cursorHandlers = useCursorHandler();
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -51,7 +53,7 @@ export default function WorkPresentation() {
               Here is a small gallery of projects that I carried out during my
               retraining, or in my personal time. <br />
               Are you interested? go see{" "}
-              <Link to="/project" className="header__text--link">
+              <Link to="/project" className="header__text--link" {...cursorHandlers}>
                 my work
               </Link>{" "}
             </p>
@@ -75,10 +77,11 @@ export default function WorkPresentation() {
                     <Link
                       to={`/project/${project.id}`}
                       className="project__detail--view"
+                      {...cursorHandlers}
                     >
                       Case study
                     </Link>
-                    <a href={project.link} className="project__github--link">
+                    <a href={project.link} className="project__github--link" {...cursorHandlers}>
                       <i className="fab fa-github fa-2x"></i>
                     </a>
                   </div>
@@ -93,6 +96,7 @@ export default function WorkPresentation() {
                 <Link
                   to={`/project/${project.id}`}
                   className="project__detail--view"
+                  {...cursorHandlers}
                 >
                   <div className="project__image--block">
                     <div className="project__image--wrapper">

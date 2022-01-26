@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../../hooks/BigBackgroundFont";
+import useCursorHandler from "../../../hooks/useCursorHandler";
 
 export default function ListBlogPost(props) {
+  const cursorHandlers = useCursorHandler();
   return (
     <section className="blog section-full" id="blog-all">
       <div className="page-blog__container">
@@ -28,7 +30,7 @@ export default function ListBlogPost(props) {
                     <div className="blog__post--content">
                       <div className="blog__post--title">
                         <h5>
-                          <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                          <Link to={`/blog/${blog.slug}`} {...cursorHandlers}>{blog.title}</Link>
                         </h5>
                       </div>
                       <div className="blog__post--content">{blog.description}</div>

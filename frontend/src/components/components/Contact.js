@@ -3,8 +3,10 @@ import Map from "./Map"
 import AnimLetter from "../hooks/AnimLetter";
 import BigBackgroundFont from "../hooks/BigBackgroundFont";
 import Button from "./Button";
+import useCursorHandler from "../hooks/useCursorHandler";
 
 export default function Contact() {
+  const cursorHandlers = useCursorHandler();
   return (
     <section className="contact section-full" id="contact">
       <BigBackgroundFont text="@" />
@@ -28,7 +30,7 @@ export default function Contact() {
           </p>
         </header>
         <div className="contact__form">
-          <a href="mailto:davprocode@gmail.com" className="submit-btn">Send !</a>
+          <a href="mailto:davprocode@gmail.com" className="submit-btn" {...cursorHandlers}>Send !</a>
         </div>
       </div>
       <div className="contact__map" data-aos="fade-left">

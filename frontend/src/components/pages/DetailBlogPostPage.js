@@ -14,7 +14,6 @@ export default function DetailBlogPostPage() {
     const fetchDetailBlog = async () => {
       try {
         const response = await axios.get(`${API_URL}${blogId.id}`);
-        console.log(response);
         setBlog(response.data);
         setLoading(false);
       } catch (error) {

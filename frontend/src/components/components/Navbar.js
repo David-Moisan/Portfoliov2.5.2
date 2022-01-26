@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useCursorHandler from "../hooks/useCursorHandler";
 import Menu from "./Menu";
 
 export default function Navbar() {
+  const cursorHandlers = useCursorHandler();
+
   return (
     <menu className="navbar">
       <div className="navbar__top">
-        <Link to="/" className="navbar__link--home" rel="Home">
+        <Link
+          to="/"
+          className="navbar__link--home"
+          title="Home"
+          {...cursorHandlers}
+        >
           <img
             rel="preload"
             src="/static/source/logo__minSize.png"

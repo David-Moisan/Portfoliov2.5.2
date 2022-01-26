@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnimLetter from "../../../hooks/AnimLetter";
+import useCursorHandler from "../../../hooks/useCursorHandler";
 
 export default function ProjectList(props) {
+  const cursorHandlers = useCursorHandler();
   return (
     <section className="all-projects">
       <h1 className="all-projects__head">
@@ -32,6 +34,7 @@ export default function ProjectList(props) {
                   <Link
                     to={`/project/${project.id}`}
                     className="all-projects__detail--view"
+                    {...cursorHandlers}
                   >
                     Case study
                   </Link>
@@ -50,6 +53,7 @@ export default function ProjectList(props) {
               <Link
                 to={`/project/${project.id}`}
                 className="all-projects__detail--view"
+                {...cursorHandlers}
               >
                 <div className="all-projects__image--block">
                   <div className="all-projects__image--wrapper">

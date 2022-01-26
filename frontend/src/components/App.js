@@ -9,12 +9,14 @@ import DetailProjectPage from "./pages/DetailProjectPage";
 import DetailBlogPostPage from "./pages/DetailBlogPostPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import Frame from "./hooks/Frame";
 
 export default class App extends Component {
   render() {
     return (
       <React.StrictMode>
         <BrowserRouter>
+          <Frame>
             <Layout>
               <Routes>
                 <Route exact path="/" element={<HomePage />} />
@@ -26,6 +28,7 @@ export default class App extends Component {
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </Layout>
+          </Frame>
         </BrowserRouter>
       </React.StrictMode>
     );

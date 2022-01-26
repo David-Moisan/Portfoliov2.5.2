@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
+}
+
+.show-cursor {
+    cursor: auto !important;
 }
 
 :root {
@@ -10,7 +15,7 @@
     --backgroundHoverC: #161616;
     --textC: #fff;
     --textMutedC: #bebebe;
-    --objectC: #fdd719;
+    --objectC: rgb(253, 215, 25);
     --objectHoverC: #ec2440;
     --blueC: #3f6096;
     --blueLightC: #5aa9bf;
