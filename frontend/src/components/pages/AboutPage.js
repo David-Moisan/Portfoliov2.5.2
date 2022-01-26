@@ -1,15 +1,15 @@
 import React from "react";
-import AnimLetter from "../hooks/AnimLetter";
-import ScrollDown from "./ScrollDown";
-import Cloud from "../hooks/Cloud";
 import { useMediaQuery } from "react-responsive";
+import ScrollDown from "../components/ScrollDown";
+import AnimLetter from "../hooks/AnimLetter";
+import Cloud from "../hooks/Cloud";
 
-export default function About() {
+export default function AboutPage() {
   const isMobile = useMediaQuery({ maxWidth: 450 });
   return (
-    <section className="about section-full" id="about">
+    <section className="about-page section-full" id="about">
       <ScrollDown />
-      <div className="about__block--text" data-aos="fade-right">
+      <div className="about-page__text" data-aos="fade-right">
         <header>
           <h2 className="header__title">
             <AnimLetter letter="M" />
@@ -36,7 +36,7 @@ export default function About() {
         </header>
       </div>
       {isMobile ? null : (
-        <div className="skill-zone" data-aos="fade-left">
+        <div className="about-page__skill" data-aos="fade-left">
           <Cloud />
         </div>
       )}

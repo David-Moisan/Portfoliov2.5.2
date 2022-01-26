@@ -8,7 +8,7 @@ import ProjectListPage from "./pages/ProjectListPage";
 import DetailProjectPage from "./pages/DetailProjectPage";
 import DetailBlogPostPage from "./pages/DetailBlogPostPage";
 import ContactPage from "./pages/ContactPage";
-import About from "./components/About";
+import AboutPage from "./pages/AboutPage";
 
 export default class App extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class App extends Component {
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/project" element={<ProjectListPage />} />
                 <Route path="/project/:id" element={<DetailProjectPage />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/blog" element={<BlogListPage />} />
                 <Route path="/blog/:id" element={<DetailBlogPostPage />} />
                 <Route path="/contact" element={<ContactPage />} />
