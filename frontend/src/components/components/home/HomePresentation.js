@@ -2,7 +2,6 @@ import React from 'react'
 import AnimLetter from '../../hooks/AnimLetter'
 import Button from '../Button'
 import ScrollDown from "../ScrollDown"
-import { Link } from "react-router-dom"
 
 export default function HomePresentation() {
     return (
