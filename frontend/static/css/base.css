@@ -75,6 +75,36 @@ ul {
     list-style: none;
 }
 
+/*!RESPONSIVE*/
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .full-page {
+        padding-left: 0 !important;
+    }
+
+    .section-full {
+        padding: 0 1rem !important;
+        min-height: 50vh !important;
+    }
+
+    .section-full.contact {
+        min-height: 55vh !important;
+    }
+
+    .big-font {
+        font-size: 11rem !important;
+        top: 0 !important;
+        left: 1rem !important;
+    }
+
+    .animation__space {
+        margin: 0.55rem !important;
+    }
+
+    .scroll-down {
+        bottom: 5rem !important;
+    }
+}
+
 .none {
     display: none;
 }
@@ -127,17 +157,168 @@ ul {
     color: var(--objectHoverC);
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-    .full-page {
-        padding-left: 0 !important;
+/*!LOADING*/
+.loading {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.logo-loading {
+    animation: flow 1s 0.21s;
+    width: 6rem;
+    height: 6rem;
+}
+
+@keyframes flow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(144px);
+        transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    100% {
+        transform: translateY(3px);
+        transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
+
+/*!BIG BACKGROUND FONT*/
+.big-font {
+    position: absolute;
+    top: -13rem;
+    font-size: 34rem;
+    font-weight: bold;
+    color: rgba(255,255,255,0.04);
+    z-index: -1;
+}
+
+/*!ANIM LETTER*/
+.animation__letter {
+    display: inline-block;
+    transition: var(--allOut);
+}
+
+.animation__letter--color {
+    color: var(--objectC);
+}
+
+.animation__letter:hover {
+    color: var(--blueLightC);
+    transition: var(--transitionColor);
+    animation: jelloBounce 0.8s ease-in-out both;
+}
+
+.animation__space {
+    margin: 1rem;
+}
+
+@keyframes jelloBounce {
+    0% {
+        transform: scale3d(1, 1, 1);
     }
 
-    .section-full {
-        padding: 0 1rem !important;
-        min-height: 50vh !important;
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
     }
 
-    .section-full.contact {
-        min-height: 55vh !important;
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
     }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/*!SCROLL*/
+
+.scroll-down {
+    position: absolute;
+    right: 0.89rem;
+    bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text);
+    font-weight: 300;
+    -webkit-box-direction:normal;
+    z-index: 50;
+}
+
+.scroll-down span {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    animation: bounce 1s linear infinite;
+}
+
+.scroll-down i {
+    margin-top: 0.89rem;
+    animation: bounce 1s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*!BUTTON*/
+.button,
+.submit-btn {
+    background: var(--backgroundC);
+    background-size: 0% 100%;
+    color: var(--blueLightC);
+    font-size: var(--btnText);
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 1.1rem;
+    padding: 0.89rem;
+    position: relative;
+    width: 100%;
+    max-width: 16rem;
+    height: 55px;
+    display: inline-block;
+    border: var(--borderBtn);
+    box-shadow: var(--boxShadow);
+    transition: var(--transitionColor);
+}
+
+.button:hover,
+.submit-btn:hover {
+    color: var(--backgroundHoverC);
+    background-color: var(--blueLightC);
+    background-size: 100% 100%;
 }
