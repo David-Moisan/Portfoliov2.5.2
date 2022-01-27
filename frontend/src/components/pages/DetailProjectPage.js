@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import useCursorHandler from "../hooks/useCursorHandler";
 
 export default function DetailProjectPage() {
-  const cursorHandlers = useCursorHandler();
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,7 +50,7 @@ export default function DetailProjectPage() {
             <h1>{project.title}</h1>
             <p className="case__project--date">{project.month} - {project.day}</p>
             <div className="case__project--link">
-              <a target="_blank" href={project.link} {...cursorHandlers}>
+              <a target="_blank" href={project.link}>
                 <i className="fa fa-github fa-2x" aria-hidden="true"></i>
               </a>
             </div>

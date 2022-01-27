@@ -1,11 +1,9 @@
 import React from "react";
 import AnimLetter from "../hooks/AnimLetter";
 import BigBackgroundFont from '../hooks/BigBackgroundFont'
-import useCursorHandler from "../hooks/useCursorHandler";
 
 
 export default function ContactPage() {
-  const cursorHandlers = useCursorHandler();
   return (
     <>
       <BigBackgroundFont text="@" />
@@ -31,7 +29,7 @@ export default function ContactPage() {
             </p>
           </header>
           <div className="contact__form">
-            <a href="mailto:davprocode@gmail.com" className="submit-btn" {...cursorHandlers}>
+            <a href="mailto:davprocode@gmail.com" className="submit-btn">
               Send !
             </a>
           </div>

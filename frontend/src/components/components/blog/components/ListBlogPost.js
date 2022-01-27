@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../../hooks/BigBackgroundFont";
-import useCursorHandler from "../../../hooks/useCursorHandler";
 
 export default function ListBlogPost(props) {
-  const cursorHandlers = useCursorHandler();
   return (
     <section className="blog section-full" id="blog-all">
       <div className="page-blog__container">
@@ -21,23 +19,28 @@ export default function ListBlogPost(props) {
                       "2px solid" + blog.category.map((item) => item.color),
                   }}
                 >
-                    <div
-                      className="blog__post--category"
-                      style={{ color: blog.category.map((item) => item.color) }}
-                    >
-                      {blog.category.map((item) => item.name)}
+                  <div
+                    className="blog__post--category"
+                    style={{ color: blog.category.map((item) => item.color) }}
+                  >
+                    {blog.category.map((item) => item.name)}
+                  </div>
+                  <div className="blog__post--content">
+                    <div className="blog__post--title">
+                      <h5>
+                        <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                      </h5>
                     </div>
                     <div className="blog__post--content">
-                      <div className="blog__post--title">
-                        <h5>
-                          <Link to={`/blog/${blog.slug}`} {...cursorHandlers}>{blog.title}</Link>
-                        </h5>
-                      </div>
-                      <div className="blog__post--content">{blog.description}</div>
-                      <Link to={`/blog/${blog.slug}`} className="blog__post--thumbnails">
-                        <img src={blog.thumbnails} alt={blog.title} />
-                      </Link>
+                      {blog.description}
                     </div>
+                    <Link
+                      to={`/blog/${blog.slug}`}
+                      className="blog__post--thumbnails"
+                    >
+                      <img src={blog.thumbnails} alt={blog.title} />
+                    </Link>
+                  </div>
                 </article>
               ))}
             </div>

@@ -1,19 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import useCursorHandler from '../hooks/useCursorHandler'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Button({ route, text }) {
-
-    const cursorHandlers = useCursorHandler();
-
-    return (
-        <Link 
-            className='button' 
-            type='button' 
-            to={route} 
-            {...cursorHandlers}
-        >
-            {text}
-        </Link>
-    )
+  return (
+    <Link className="button" type="button" to={route}>
+      {text}
+    </Link>
+  );
 }
