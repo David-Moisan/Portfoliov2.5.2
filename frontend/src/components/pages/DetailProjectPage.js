@@ -53,7 +53,7 @@ export default function DetailProjectPage() {
             <p className="case__project--date">{project.month} - {project.day}</p>
             <div className="case__project--link">
               <a target="_blank" href={project.link} {...cursorHandlers}>
-                <i className="fab fa-github fa-2x"></i>
+                <i className="fa fa-github fa-2x" aria-hidden="true"></i>
               </a>
             </div>
           </div>

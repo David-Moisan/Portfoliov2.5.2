@@ -33,7 +33,7 @@ export default function Navbar() {
             target="_blank"
             className="navbar__link--social"
           >
-            <i className="fab fa-github"></i>
+            <i className="fa fa-github" aria-hidden="true"></i>
           </a>
         </li>
         <li className="navbar__social--item">
@@ -42,7 +42,7 @@ export default function Navbar() {
             target="_blank"
             className="navbar__link--social"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </li>
       </ul>

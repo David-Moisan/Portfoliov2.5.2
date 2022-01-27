@@ -9,11 +9,11 @@ export default function Menu() {
 
     return (
         <nav className='navbar__menu'>
-            <NavLink to="/project" title='My Project' {...cursorHandlers}>{isTablet ? <i className="fas fa-project-diagram mobile-icons"></i> : "Project" }</NavLink>
-            <NavLink to="/about" title='About me' {...cursorHandlers}>{isTablet ? <i className="fas fa-user-circle mobile-icons"></i> : "About"}</NavLink>
-            {isTablet ? <NavLink to='/' title='Home' {...cursorHandlers}><i className='fas fa-home mobile-icons'></i></NavLink> : null }
-            <NavLink to="/blog" title='Blog Posts' {...cursorHandlers}>{isTablet ? <i className="fas fa-newspaper mobile-icons"></i> : "Blog"}</NavLink>
-            <NavLink to="/contact" title='Contact me' {...cursorHandlers}>{isTablet ? <i className="fas fa-paper-plane mobile-icons"></i> :"Contact"}</NavLink>
+            <NavLink to="/project" title='My Project' {...cursorHandlers}>{isTablet ? <i className="fa fa-code mobile-icons" aria-hidden="true"></i> : "Project" }</NavLink>
+            <NavLink to="/about" title='About me' {...cursorHandlers}>{isTablet ? <i className="fa fa-user mobile-icons" aria-hidden="true"></i> : "About"}</NavLink>
+            {isTablet ? <NavLink to='/' title='Home' {...cursorHandlers}><i className='fa fa-home mobile-icons' aria-hidden="true"></i></NavLink> : null }
+            <NavLink to="/blog" title='Blog Posts' {...cursorHandlers}>{isTablet ? <i className="fa fa-newspaper-o mobile-icons" aria-hidden="true"></i> : "Blog"}</NavLink>
+            <NavLink to="/contact" title='Contact me' {...cursorHandlers}>{isTablet ? <i className="fa fa-paper-plane mobile-icons" aria-hidden="true"></i> :"Contact"}</NavLink>
         </nav>
     )
 }

@@ -10,7 +10,7 @@ export default function Map() {
         <br />
         <br />
         <span>
-          <i className="far fa-envelope"></i> : davprocode@gmail.com
+          <i className="fa fa-envelope" aria-hidden="true"></i> : davprocode@gmail.com
         </span>
       </div>
       <img

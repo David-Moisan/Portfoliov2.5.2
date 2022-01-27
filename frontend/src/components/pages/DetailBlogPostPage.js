@@ -37,7 +37,7 @@ export default function DetailBlogPostPage() {
       <header>
         <div className="detail__blog--back">
           <Link to="/">
-            <i className="fas fa-long-arrow-alt-left"></i>
+            <i className="fa fa-arrow-left" aria-hidden="true"></i>
             Back
           </Link>
         </div>

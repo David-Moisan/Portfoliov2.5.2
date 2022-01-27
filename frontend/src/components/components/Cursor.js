@@ -50,7 +50,6 @@ const Cursor = () => {
           stroke: cursor.active ? gold : "black",
           strokeWidth: 1,
           fill: cursor.active ? alphaGold : gold,
-          mixBlendMode: cursor.active ? "difference" : null,
           transition: "transform .21s ease-in-out",
           opacity: isVisible && clientX > 1 ? 1 : 0,  
         }}

@@ -39,7 +39,7 @@ export default function ProjectList(props) {
                     Case study
                   </Link>
                   <a href={project.link} className="all-projects__github--link">
-                    <i className="fab fa-github fa-2x"></i>
+                    <i className="fa fa-github fa-2x" aria-hidden="true"></i>
                   </a>
                 </div>
                 <ul className="all-projects__languages">

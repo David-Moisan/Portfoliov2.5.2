@@ -179,7 +179,7 @@ function init() {
     renderer.render(scene, camera);
     //Synchronize a render to the animation
     requestAnimationFrame(render);
-  
+    
     meshes.forEach((mesh) => {
       if (mesh.visible) {
         mesh.rotation.z += 0.002;

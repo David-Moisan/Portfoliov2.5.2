@@ -26,8 +26,8 @@ export default function WorkPresentation() {
       });
   }, []);
 
-  if (loading) return <i className="fas fa-spinner spinner"></i>;
-  if (error) return <i className="fas fa-times error-cross"></i>;
+  if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
+  if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
 
   return (
     <section className="work section-full" id="work">
@@ -82,7 +82,7 @@ export default function WorkPresentation() {
                       Case study
                     </Link>
                     <a href={project.link} className="project__github--link" {...cursorHandlers}>
-                      <i className="fab fa-github fa-2x"></i>
+                      <i className="fa fa-github fa-2x" aria-hidden="true"></i>
                     </a>
                   </div>
                   <ul className="project__languages">

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HomePresentation from "../components/home/HomePresentation";
-import Animation from "../components/home/Animation";
+/* import Animation from "../components/home/Animation"; */
 import Project from "../components/Project";
 import About from "../components/About";
 import Blog from "../components/Blog";
@@ -11,7 +11,7 @@ export default class HomePage extends Component {
     return (
       <div className="full-page">
         <HomePresentation />
-        <Animation />
+        {/* <Animation /> */}
         <Project />
         <About />
         <Blog />
