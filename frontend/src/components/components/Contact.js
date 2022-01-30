@@ -27,7 +27,7 @@ export default function Contact() {
           </p>
         </header>
         <div className="contact__form">
-          <a href="mailto:davprocode@gmail.com" className="submit-btn">Send !</a>
+          <a href="mailto:admin@davprocode.com" className="submit-btn">Send !</a>
         </div>
       </div>
       <div className="contact__map" data-aos="fade-left">

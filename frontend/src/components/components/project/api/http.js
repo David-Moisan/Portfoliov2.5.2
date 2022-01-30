@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/project/"
+const API_URL = "https://davprocode.com/api/project/"
 
 /**
  * Récupère les données de tous les projets via l'API Django

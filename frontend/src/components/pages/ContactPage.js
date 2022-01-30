@@ -29,7 +29,7 @@ export default function ContactPage() {
             </p>
           </header>
           <div className="contact__form">
-            <a href="mailto:davprocode@gmail.com" className="submit-btn">
+            <a href="mailto:admin@davprocode.com" className="submit-btn">
               Send !
             </a>
           </div>

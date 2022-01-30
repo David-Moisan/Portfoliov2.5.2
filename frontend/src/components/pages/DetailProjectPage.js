@@ -10,7 +10,7 @@ export default function DetailProjectPage() {
   const projectId = useParams();
 
   useEffect(() => {
-    const API_URL = "http://127.0.0.1:8000/api/project/";
+    const API_URL = "https://davprocode.com/api/project/";
     const fetchDetailProject = async () => {
       try {
         const response = await axios.get(

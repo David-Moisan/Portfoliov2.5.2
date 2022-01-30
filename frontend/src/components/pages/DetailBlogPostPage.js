@@ -10,7 +10,7 @@ export default function DetailBlogPostPage() {
   const blogId = useParams();
 
   useEffect(() => {
-    const API_URL = "http://127.0.0.1:8000/api/blog/";
+    const API_URL = "https://davprocode.com/api/blog/";
     const fetchDetailBlog = async () => {
       try {
         const response = await axios.get(`${API_URL}${blogId.id}`);
