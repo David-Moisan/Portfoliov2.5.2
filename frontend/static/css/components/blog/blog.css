@@ -14,6 +14,12 @@
     }
 }
 
+@media only screen and (max-width: 320px) {
+    .blog__footer--link {
+        font-size: var(--text) !important;
+    }
+}
+
 .blog__articles {
     display: flex;
     flex-wrap: wrap;

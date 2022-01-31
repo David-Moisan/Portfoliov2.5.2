@@ -27,6 +27,16 @@
     }
 }
 
+@media only screen and (max-width: 320px) {
+    .case__content img, .blog__content img {
+        max-width: 18.06rem !important;
+    }
+
+    .case__content iframe {
+        max-width: 19rem !important;
+    }
+}
+
 .case__project, 
 .detail__blog {
     margin-left: 3rem;

@@ -22,6 +22,25 @@
     }
 }
 
+@media only screen and (max-width: 320px) {
+    .all-projects__head {
+        font-size: 2.89rem !important;
+    }
+
+    .all-projects__content {
+        padding: 0.89rem !important;
+    }
+
+    .all-projects__description {
+        line-height: normal !important;
+        min-height: 0vh !important;
+    }
+
+    .all-projects__image--block {
+        display: none !important;
+    }
+}
+
 .all-projects {
     margin: 0 auto;
     padding: 5rem 0;

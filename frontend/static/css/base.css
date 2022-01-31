@@ -91,7 +91,8 @@ ul {
     }
 
     .big-font {
-        font-size: 11rem !important;
+        width: 100% !important;
+        font-size: 13rem !important;
         top: 0 !important;
         left: 1rem !important;
     }
@@ -102,6 +103,15 @@ ul {
 
     .scroll-down {
         bottom: 5rem !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .big-font {
+        width: 100% !important;
+        font-size: 8rem !important;
+        top: 0 !important;
+        left: 1rem !important;
     }
 }
 

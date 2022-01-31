@@ -3,13 +3,13 @@
 @media only screen and (min-width: 320px) and (max-width: 768px) {
     .navbar {
         width: 100% !important;
-        height: 4rem !important;
+        height: 4.5rem !important;
         background-color: var(--backgroundHoverC) !important;
         position: fixed;
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
-        top: 93% !important;
+        top: 91% !important;
         z-index: 1000;
         margin: 0;
         padding: 0;

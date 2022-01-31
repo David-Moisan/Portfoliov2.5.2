@@ -16,10 +16,44 @@
     }
 
     .project__item {
-        grid-template-columns: repeat(6, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
     }
 
     .project__item .project__image {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .work__block--header .header__title {
+        line-height: normal !important;
+        font-size: 2.89rem !important;
+    }
+
+    .header__title {
+        font-size: 2.89rem !important;
+        line-height: normal !important;
+    }
+
+    .project__item {
+        gap: 0px !important;
+        max-width: 304px !important;
+    }
+
+    .project__item .project__content {
+        padding: 3.44rem 0.55rem !important;
+
+    }
+
+    .project__item .project__description {
+        padding: 0 !important;
+    }
+
+    .project__item .project__languages {
+        flex-wrap: nowrap !important;
+    }
+
+    .project__image--block {
         display: none !important;
     }
 }
