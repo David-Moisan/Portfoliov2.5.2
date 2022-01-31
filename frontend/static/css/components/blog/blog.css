@@ -1,8 +1,12 @@
 @import url('../../base.css');
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     .blog__articles .blog__post {
         width: 100% !important;
+    }
+
+    .blog__footer--link {
+        font-size: var(--text) !important;
     }
 
     .blog__post--description {

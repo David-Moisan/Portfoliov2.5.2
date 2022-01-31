@@ -1,22 +1,31 @@
 @import url('../../base.css');
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     .work__block--text {
         align-items: center !important;
         flex-direction: column !important;
     }
 
     .work__block--header .header__title {
+        font-size: 3.55rem !important;
         line-height: normal !important;
-        font-size: 4rem !important;
+    }
+
+    .header__title {
+        font-size: 3.55rem !important;
     }
 
     .work__block--text > div > a {
         margin-left: 1.5rem !important;
     }
 
+    .projects {
+        max-width: 375px !important;
+    }
+
     .project__item {
-        grid-template-columns: repeat(3, 1fr) !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .project__item .project__image {

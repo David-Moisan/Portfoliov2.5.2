@@ -1,6 +1,6 @@
 @import url('../base.css');
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 1024px) {
     .case__project, .detail__blog { margin-left: 0 !important;}
 
     .case__project > header,
@@ -19,11 +19,11 @@
 
     .case__content img,
     .blog__content img {
-        max-width: 405.600px !important;
+        max-width: 22.44rem !important;
     }
     
     .case__content iframe {
-        max-width: 405.600px !important;
+        max-width: 22.44rem !important;
     }
 }
 

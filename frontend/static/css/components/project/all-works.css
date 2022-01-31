@@ -1,6 +1,6 @@
 @import url("../../base.css");
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 1024px) {
     .all-projects {
         padding: 5rem 0.34rem !important;
     }
@@ -19,6 +19,16 @@
     .all-projects__content {
         background-color: var(--backgroundC) !important;
         box-shadow: var(--boxShadow) !important;
+        padding: 1rem !important;
+    }
+
+    .all-projects__description {
+        line-height: normal !important;
+        min-height: 0vh !important;
+    }
+
+    .all-projects__image--block {
+        display: none !important;
     }
 }
 

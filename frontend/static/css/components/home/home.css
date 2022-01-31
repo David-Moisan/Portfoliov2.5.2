@@ -36,7 +36,7 @@
     color: var(--textMutedC);
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     .home .home__block--title {
         font-size: 4rem !important;
         line-height: normal !important;
