@@ -25,8 +25,8 @@ export default function DetailProjectPage() {
     fetchDetailProject();
   }, [projectId]);
 
-  if (loading) return <i className="fas fa-spinner spinner"></i>;
-  if (error) return <i className="fas fa-times error-cross"></i>;
+  if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
+  if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
 
   const createProject = () => {
       return {
@@ -39,7 +39,7 @@ export default function DetailProjectPage() {
       <header>
         <div className="case__project--back">
           <Link to="/">
-            <i className="fas fa-long-arrow-alt-left"></i>
+            <i className="fa fa-long-arrow-alt-left" aria-hidden="true"></i>
             Back
           </Link>
         </div>

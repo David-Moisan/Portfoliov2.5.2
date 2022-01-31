@@ -23,8 +23,8 @@ export default function DetailBlogPostPage() {
     fetchDetailBlog();
   }, [blogId]);
 
-  if (loading) return <i className="fas fa-spinner spinner"></i>;
-  if (error) return <i className="fas fa-times error-cross"></i>;
+  if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
+  if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
 
   const createBlog = () => {
     return {
