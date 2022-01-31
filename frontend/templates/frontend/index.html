@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Portfolio of DavMcode</title>
+    <meta name="description"
+        content="davprocode.com est mon portfolio personnel, je suis développeur Full Stack junior et voici mon travail !">
+    <meta name="author" content="Davprocode">
+    <title>Portfolio of Davprocode</title>
     {% load static %}
     <!-- Icon -->
     <link rel="shortcut icon" href="{% static "source/logo.ico" %}" type="image/x-icon">
@@ -44,6 +47,19 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <!-- GoogleTag.js -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9G46DCV16Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9G46DCV16Z');
     </script>
 </body>
 
