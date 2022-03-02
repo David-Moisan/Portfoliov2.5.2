@@ -1,3 +1,6 @@
+/*@David-Moisan*/
+/**refactoring 02/03/22 */
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";

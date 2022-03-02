@@ -10,7 +10,7 @@
     --backgroundHoverC: #161616;
     --textC: #fff;
     --textMutedC: #bebebe;
-    --objectC: rgb(253, 215, 25);
+    --objectC: #fdd719;
     --objectHoverC: #ec2440;
     --blueC: #3f6096;
     --blueLightC: #5aa9bf;
@@ -29,10 +29,10 @@
     --respTitle: 1rem;
     --respSubtitle: 0.89rem;
     --respText: 0.55rem;
-    --respBtnText: 0.55rem; 
+    --respBtnText: 0.55rem;
 
     /*!SHADOWS*/
-    --boxShadow: 5px 8px 13px 3px rgb(20,20,20);
+    --boxShadow: 5px 8px 13px 3px rgb(20, 20, 20);
 
     /*!BORDERS*/
     --border: 1px solid var(--textMutedC);
@@ -46,7 +46,8 @@
     --transitionOpacity: opacity 0.21s ease-in-out;
 }
 
-html, body {
+html,
+body {
     width: 1px;
     height: 100vh;
     background: var(--backgroundC);
@@ -58,13 +59,16 @@ html, body {
 body {
     font-size: 16px;
     line-height: 1.5;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll; 
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    /* for Firefox */
+    overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* for Chrome, safari, and Opera */
+    display: none;
+    /* for Chrome, safari, and Opera */
 }
 
 a {
@@ -140,9 +144,9 @@ ul {
 }
 
 .full-page {
- position: relative;
- min-height: 100vh;
- padding-left: 13rem;
+    position: relative;
+    min-height: 100vh;
+    padding-left: 13rem;
 }
 
 .section-full {
@@ -195,10 +199,12 @@ ul {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(144px);
         transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+
     100% {
         transform: translateY(3px);
         transition: transform 0.21s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -211,7 +217,7 @@ ul {
     top: -13rem;
     font-size: 34rem;
     font-weight: bold;
-    color: rgba(255,255,255,0.04);
+    color: rgba(255, 255, 255, 0.04);
     z-index: -1;
 }
 
@@ -277,7 +283,7 @@ ul {
     justify-content: center;
     font-size: var(--text);
     font-weight: 300;
-    -webkit-box-direction:normal;
+    -webkit-box-direction: normal;
     z-index: 50;
 }
 
