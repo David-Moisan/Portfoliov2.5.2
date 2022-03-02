@@ -1,8 +1,40 @@
+/* html,
+body {
+    width: 1px;
+    height: 100vh;
+    background: var(--backgroundC);
+    color: var(--textC);
+    font-family: var(--RobotoF);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+} 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+*/
+
 
 :root {
     /*!COLORS*/
@@ -46,38 +78,6 @@
     --transitionOpacity: opacity 0.21s ease-in-out;
 }
 
-html,
-body {
-    width: 1px;
-    height: 100vh;
-    background: var(--backgroundC);
-    color: var(--textC);
-    font-family: var(--RobotoF);
-    scroll-behavior: smooth;
-}
-
-body {
-    font-size: 16px;
-    line-height: 1.5;
-    -ms-overflow-style: none;
-    /* for Internet Explorer, Edge */
-    scrollbar-width: none;
-    /* for Firefox */
-    overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, safari, and Opera */
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
 
 /*!RESPONSIVE*/
 
@@ -313,7 +313,7 @@ ul {
 }
 
 /*!BUTTON*/
-.button,
+/* .button,
 .submit-btn {
     background: var(--backgroundC);
     background-size: 0% 100%;
@@ -338,4 +338,4 @@ ul {
     color: var(--backgroundHoverC);
     background-color: var(--blueLightC);
     background-size: 100% 100%;
-}
+} */
