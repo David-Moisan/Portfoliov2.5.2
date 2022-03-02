@@ -7,6 +7,7 @@ const colors = {
     red: '#ec2440',
     blue: '#3f6096',
     blueLight: '#5aa9bf',
+    boxShadow: '#141414',
 }
 
 export default colors
