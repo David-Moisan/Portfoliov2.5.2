@@ -1,6 +1,6 @@
 import React from "react";
-import AnimLetter from "../hooks/AnimLetter";
-import BigBackgroundFont from '../hooks/BigBackgroundFont'
+import AnimLetter from "../components/AnimLetter";
+import BigBackgroundFont from '../components/BigBackgroundFont'
 
 /**
  * ContactPage

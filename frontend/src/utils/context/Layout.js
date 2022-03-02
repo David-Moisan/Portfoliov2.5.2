@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Loading from "./Loading";
-import Navbar from "../components/Navbar";
+import Loading from "../../components/Loading";
+import Navbar from "../../components/Navbar";
 
 export default class Layout extends Component {
   constructor(props) {

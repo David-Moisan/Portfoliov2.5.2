@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AnimLetter from "../../../hooks/AnimLetter";
+import AnimLetter from "../../AnimLetter";
 
 /**
  * ProjectList

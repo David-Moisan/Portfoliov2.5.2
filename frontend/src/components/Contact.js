@@ -1,7 +1,7 @@
 import React from "react";
 import Map from "./Map"
-import AnimLetter from "../hooks/AnimLetter";
-import BigBackgroundFont from "../hooks/BigBackgroundFont";
+import AnimLetter from "./AnimLetter";
+import BigBackgroundFont from "./BigBackgroundFont";
 
 /**
  * Contact

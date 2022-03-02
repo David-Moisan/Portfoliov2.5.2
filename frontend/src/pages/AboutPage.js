@@ -1,8 +1,8 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import ScrollDown from "../components/ScrollDown";
-import AnimLetter from "../hooks/AnimLetter";
-import Cloud from "../hooks/Cloud";
+import AnimLetter from "../components/AnimLetter";
+import Cloud from "../components/Cloud";
 
 /**
  * AboutPage
