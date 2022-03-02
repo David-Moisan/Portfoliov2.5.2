@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Map
+ * @returns la Map 
+ */
 export default function Map() {
   return (
     <div id="map">

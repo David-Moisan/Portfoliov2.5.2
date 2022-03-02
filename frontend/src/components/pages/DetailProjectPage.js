@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
+
+/**
+ * Pour chaque projet cette page détails l'ensemble du projet
+ * ! Refactoring: utiliser un hook perso "useFetch"
+ * @returns 
+ */
 export default function DetailProjectPage() {
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,6 +34,10 @@ export default function DetailProjectPage() {
   if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
   if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
 
+  /**
+   * createProject fonction qui permet récupérer l'ensemble du text du summernote django
+   * @returns _html le content du projet
+   */
   const createProject = () => {
       return {
         __html: project.content

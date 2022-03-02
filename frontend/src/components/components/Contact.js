@@ -3,6 +3,11 @@ import Map from "./Map"
 import AnimLetter from "../hooks/AnimLetter";
 import BigBackgroundFont from "../hooks/BigBackgroundFont";
 
+/**
+ * Contact
+ * ! Refactoring: Rassembler le fichier Map et Contact
+ * @returns l'ensemble du composant Contact 
+ */
 export default function Contact() {
   return (
     <section className="contact section-full" id="contact">

@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
+
+/**
+ * Pour chaque post cette page détails l'ensemble de l'article de blog
+ * ! Refactoring: utiliser un hook perso "useFetch"
+ * @returns 
+ */
 export default function DetailBlogPostPage() {
   const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,6 +32,10 @@ export default function DetailBlogPostPage() {
   if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
   if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
 
+  /**
+   * createBlog fonction qui permet récupérer l'ensemble du text du summernote django
+   * @returns _html le content de l'article de blog
+   */
   const createBlog = () => {
     return {
       __html: blog.content,

@@ -2,7 +2,11 @@ import React from "react";
 import AnimLetter from "../hooks/AnimLetter";
 import BigBackgroundFont from '../hooks/BigBackgroundFont'
 
-
+/**
+ * ContactPage
+ * ! Idéé: Créer un anim letter pour des phrases et non pour chaque lettre permetrait de mieux lire le code ? 
+ * @returns La page contact
+ */
 export default function ContactPage() {
   return (
     <>

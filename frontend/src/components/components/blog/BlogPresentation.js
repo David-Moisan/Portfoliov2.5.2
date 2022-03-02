@@ -4,6 +4,12 @@ import BigBackgroundFont from "../../hooks/BigBackgroundFont";
 import ScrollDown from "../ScrollDown";
 import { loadBlogPostFromAPI } from "./api/http";
 
+
+/**
+ * Blog Présentation
+ * ! Features: mettre en place un sort pour le cas où il y aura plus d'articles (limit: 6)
+ * @returns la liste des articles de blog sur la home page
+ */
 export default function BlogPresentation() {
   const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(true);

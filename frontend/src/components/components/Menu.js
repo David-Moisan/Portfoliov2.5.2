@@ -2,6 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useMediaQuery } from "react-responsive"
 
+/**
+ * Menu
+ * @returns l'ensemble des liens pour naviguer sur le site 
+ */
 export default function Menu() {
     const isTablet = useMediaQuery({maxWidth: 768});
 

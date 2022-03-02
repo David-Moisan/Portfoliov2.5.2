@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import TagCloud from "TagCloud";
 
+/**
+ * Cloud
+ * return l'animation de la section About 
+ */
 export default class Cloud extends Component {
   constructor(props) {
     super(props);

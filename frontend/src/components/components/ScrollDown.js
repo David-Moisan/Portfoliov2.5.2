@@ -1,5 +1,9 @@
 import React from 'react'
 
+/**
+ * ScrollDown
+ * @returns le composants du scroll-down
+ */
 export default function ScrollDown() {
     return (
         <div className='scroll-down'>

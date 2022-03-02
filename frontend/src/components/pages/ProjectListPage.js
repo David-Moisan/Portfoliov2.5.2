@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { loadProjectFromAPI } from "../components/project/api/http";
 import ProjectList from "../components/project/components/ProjectList";
 
+/**
+ * ProjectListPage appel l'API project 
+ * @returns tous les projets
+ * ! Refactoring: appel de l'API avec un hook perso "useFetch"
+ */
 export default function ProjectListPage() {
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);

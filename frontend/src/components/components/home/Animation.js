@@ -197,6 +197,10 @@ function init() {
   
   init();
 
+/**
+ * HomeAnimation
+ * @returns l'animation Three.js
+ */
 export default function HomeAnimation() {
     return (
         <div className='none'>

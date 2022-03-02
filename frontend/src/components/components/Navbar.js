@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 
+/**
+ * Navbar
+ * !Refactoring: Rassembler le fichier menu et Navbar ?
+ * @returns la navbar + le Menu 
+ */
 export default function Navbar() {
 
   return (

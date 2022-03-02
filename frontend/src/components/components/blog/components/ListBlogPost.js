@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../../hooks/BigBackgroundFont";
 
+/**
+ * ListBlogPost
+ * @param {Array} props 
+ * @returns l'ensemble des articles de blog
+ */
 export default function ListBlogPost(props) {
   return (
     <section className="blog section-full" id="blog-all">

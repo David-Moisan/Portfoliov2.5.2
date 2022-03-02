@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { loadBlogPostFromAPI } from "../components/blog/api/http";
 import ListBlogPost from "../components/blog/components/ListBlogPost";
 
+/**
+ * BlogListPage
+ * ! Refactoring: "useFetch" (hook perso)
+ * @returns l'ensemble des articles de blog
+ */
 export default function BlogListPage() {
   const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(true);

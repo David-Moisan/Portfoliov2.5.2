@@ -3,6 +3,11 @@ import AnimLetter from '../../hooks/AnimLetter'
 import Button from '../Button'
 import ScrollDown from "../ScrollDown"
 
+/**
+ * Home Présentation
+ * ! Refactoring: Mettre en cache l'animation ? via le Singleton Design Pattern
+ * @returns le text de présentation animé + l'animation Three.js
+ */
 export default function HomePresentation() {
     return (
         <>

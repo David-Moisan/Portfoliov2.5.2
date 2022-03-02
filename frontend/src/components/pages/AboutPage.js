@@ -4,6 +4,10 @@ import ScrollDown from "../components/ScrollDown";
 import AnimLetter from "../hooks/AnimLetter";
 import Cloud from "../hooks/Cloud";
 
+/**
+ * AboutPage
+ * @returns le paragraphe de présentation + l'animation Cloud = desktop ? true : null 
+ */
 export default function AboutPage() {
   const isMobile = useMediaQuery({ maxWidth: 450 });
   return (

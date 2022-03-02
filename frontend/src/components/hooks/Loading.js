@@ -1,6 +1,10 @@
 import React from "react";
 import ReactLoading from "react-loading";
 
+/**
+ * Loading
+ * @returns Le loader de l'accueil 
+ */
 const Loading = () => {
   return (
     <div className="loading">

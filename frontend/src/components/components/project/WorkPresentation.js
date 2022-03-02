@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import BigBackgroundFont from "../../hooks/BigBackgroundFont";
 import { loadProjectFromAPI } from "./api/http";
 
+/**
+ * WorkPrésentation
+ * ! Refactoring: "useFetch" 
+ * @returns une liste des 4 derniers projet trié par ordre de sortie
+ */
 export default function WorkPresentation() {
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);

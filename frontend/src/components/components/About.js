@@ -4,6 +4,10 @@ import ScrollDown from "./ScrollDown";
 import Cloud from "../hooks/Cloud";
 import { useMediaQuery } from "react-responsive";
 
+/**
+ * About
+ * @returns le composant About pour une présentation  
+ */
 export default function About() {
   const isMobile = useMediaQuery({ maxWidth: 450 });
   return (

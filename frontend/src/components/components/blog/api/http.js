@@ -1,5 +1,9 @@
 const API_URL = "https://davprocode.com/api/blog/"
 
+/**
+ * loadBlogPostFromAPI
+ * @returns l'ensemble des articles de l'API Blog
+ */
 export const loadBlogPostFromAPI = async () => {
     const response = await fetch(`${API_URL}`, {
         method: "GET",

@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AnimLetter from "../../../hooks/AnimLetter";
 
+/**
+ * ProjectList
+ * @param {Array} props 
+ * @returns l'ensemble des projets sous forme de liste
+ */
 export default function ProjectList(props) {
   return (
     <section className="all-projects">
