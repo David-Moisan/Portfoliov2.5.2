@@ -57,7 +57,7 @@ function init() {
     renderer.setClearColor(0x221a1a, 1);
     renderer.physicallyCorrectLights = true;
     renderer.outputEncoding = THREE.sRGBEncoding;
-    domEl = document.getElementById("container").appendChild( renderer.domElement )
+    //domEl = document.getElementById("container").appendChild( renderer.domElement )
   
     //callback function
     setupResize();
@@ -201,10 +201,10 @@ function init() {
  * HomeAnimation
  * @returns l'animation Three.js
  */
-export default function HomeAnimation() {
+/* export default function HomeAnimation() {
     return (
         <div className='none'>
             init()
         </div>
     )
-}
+} */
