@@ -15,7 +15,7 @@ export default class HomePage extends Component {
     return (
       <div className="full-page">
         <HomePresentation />
-        <Animation />
+        {/* <Animation /> */}
         <Project />
         <About />
         <Blog />
