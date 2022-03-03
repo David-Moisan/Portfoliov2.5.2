@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimLetter from '../AnimLetter'
+import AnimLetter from '../AnimLetter/AnimLetter'
 import Button from '../Button/Button'
 import ScrollDown from '../ScrollDown/ScrollDown'
 

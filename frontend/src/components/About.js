@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimLetter from './AnimLetter'
+import AnimLetter from './AnimLetter/AnimLetter'
 import ScrollDown from './ScrollDown/ScrollDown'
 import Cloud from './Cloud'
 import { useMediaQuery } from 'react-responsive'

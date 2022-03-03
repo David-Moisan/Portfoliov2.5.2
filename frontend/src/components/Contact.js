@@ -1,6 +1,6 @@
 import React from 'react'
 import Map from './Map'
-import AnimLetter from './AnimLetter'
+import AnimLetter from './AnimLetter/AnimLetter'
 import BigBackgroundFont from './BigFont/BigBackgroundFont'
 import Button from './Button/Button'
 

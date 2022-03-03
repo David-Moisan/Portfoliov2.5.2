@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Button from '../Button/Button'
-import AnimLetter from '../AnimLetter'
+import AnimLetter from '../AnimLetter/AnimLetter'
 import { Link } from 'react-router-dom'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import { loadProjectFromAPI } from './api/http'

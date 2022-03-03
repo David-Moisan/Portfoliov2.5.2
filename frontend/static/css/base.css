@@ -95,30 +95,30 @@ ul {
         min-height: 55vh !important;
     }
 
-    .big-font {
+    /* .big-font {
         width: 100% !important;
         font-size: 10rem !important;
         top: 0 !important;
         left: 1rem !important;
-    }
+    } */
 
     .animation__space {
         margin: 0.55rem !important;
     }
 
-    .scroll-down {
+    /* .scroll-down {
         bottom: 5rem !important;
-    }
+    } */
 }
 
-@media only screen and (max-width: 320px) {
+/* @media only screen and (max-width: 320px) {
     .big-font {
         width: 100% !important;
         font-size: 8rem !important;
         top: 0 !important;
         left: 1rem !important;
     }
-}
+} */
 
 .none {
     display: none;
@@ -223,25 +223,26 @@ ul {
 } */
 
 /*!ANIM LETTER*/
-.animation__letter {
+/* .animation__letter {
     display: inline-block;
     transition: var(--allOut);
-}
+} */
 
 .animation__letter--color {
     color: var(--objectC);
 }
 
-.animation__letter:hover {
+/* .animation__letter:hover {
     color: var(--blueLightC);
     transition: var(--transitionColor);
     animation: jelloBounce 0.8s ease-in-out both;
-}
+} */
 
 .animation__space {
     margin: 1rem;
 }
 
+/* 
 @keyframes jelloBounce {
     0% {
         transform: scale3d(1, 1, 1);
@@ -270,7 +271,7 @@ ul {
     100% {
         transform: scale3d(1, 1, 1);
     }
-}
+} */
 
 /*!SCROLL*/
 /* 
