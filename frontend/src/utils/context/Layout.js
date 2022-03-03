@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import Loading from '../../components/Loading'
 import Navbar from '../../components/Navbar/Navbar'
+import styled from 'styled-components'
+
+const PageInner = styled.div`
+    height: 100vh;
+    width: 100vw;
+`
 
 export default class Layout extends Component {
     constructor(props) {
@@ -21,10 +27,10 @@ export default class Layout extends Component {
       return <Loading />;
     } */
         return (
-            <div className="page-inner">
+            <PageInner>
                 <Navbar />
                 {this.props.children}
-            </div>
+            </PageInner>
         )
     }
 }

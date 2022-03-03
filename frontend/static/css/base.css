@@ -82,14 +82,14 @@ ul {
 /*!RESPONSIVE*/
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
-    .full-page {
+    /* .full-page {
         padding-left: 0 !important;
-    }
+    } */
 
-    .section-full {
+    /* .section-full {
         padding: 0 1rem !important;
         min-height: 50vh !important;
-    }
+    } */
 
     .section-full.contact {
         min-height: 55vh !important;
@@ -102,9 +102,9 @@ ul {
         left: 1rem !important;
     } */
 
-    .animation__space {
+    /* .animation__space {
         margin: 0.55rem !important;
-    }
+    } */
 
     /* .scroll-down {
         bottom: 5rem !important;
@@ -138,23 +138,24 @@ ul {
     height: 100vh !important;
 }
 
+/* 
 .page-inner {
     width: 100vw;
     height: 100vh;
-}
-
+} */
+/* 
 .full-page {
     position: relative;
     min-height: 100vh;
     padding-left: 13rem;
-}
+} */
 
-.section-full {
+/* .section-full {
     min-height: 100vh;
     padding: 0 3.45rem;
     position: relative;
     transition: var(--transitionOpacity);
-}
+} */
 
 .spinner {
     display: flex;
@@ -228,9 +229,9 @@ ul {
     transition: var(--allOut);
 } */
 
-.animation__letter--color {
+/* .animation__letter--color {
     color: var(--objectC);
-}
+} */
 
 /* .animation__letter:hover {
     color: var(--blueLightC);
@@ -238,9 +239,9 @@ ul {
     animation: jelloBounce 0.8s ease-in-out both;
 } */
 
-.animation__space {
+/* .animation__space {
     margin: 1rem;
-}
+} */
 
 /* 
 @keyframes jelloBounce {

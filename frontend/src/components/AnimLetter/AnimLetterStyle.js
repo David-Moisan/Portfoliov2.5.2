@@ -40,3 +40,14 @@ export const AnimationLetter = styled.span`
         animation: ${jelloBounce} 0.8s ease-in-out both;
     }
 `
+export const AnimationSpace = styled.span`
+    margin: 1rem;
+
+    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+        margin: 0.55rem;
+    }
+`
+
+export const ColorLetter = styled.span`
+    color: ${colors.yellow};
+`

@@ -1,7 +1,15 @@
 import React from 'react'
 import AnimLetter from '../AnimLetter/AnimLetter'
+import { AnimationSpace, ColorLetter } from '../AnimLetter/AnimLetterStyle'
 import Button from '../Button/Button'
 import ScrollDown from '../ScrollDown/ScrollDown'
+import { SectionFull } from '../../utils/style/SectionFull'
+import {
+    HomeContainer,
+    HomeWrapper,
+    HomeTitle,
+    HomeSubtitle,
+} from './HomeStyle'
 
 /**
  * Home Présentation
@@ -10,13 +18,10 @@ import ScrollDown from '../ScrollDown/ScrollDown'
  */
 export default function HomePresentation() {
     return (
-        <>
-            <section className="home section-full" id="home-section">
-                <div className="home__block--text" data-aos="fade-right">
-                    <h1
-                        className="home__block--title"
-                        aria-label="Hi, I'm David, web developer"
-                    >
+        <SectionFull>
+            <HomeContainer>
+                <HomeWrapper data-aos="fade-right">
+                    <HomeTitle>
                         <AnimLetter letter="H" />
                         <AnimLetter letter="i" />
                         <AnimLetter letter="," />
@@ -24,8 +29,8 @@ export default function HomePresentation() {
                         <AnimLetter letter="I" />
                         <AnimLetter letter="'" />
                         <AnimLetter letter="m" />
-                        <span className="animation__space"></span>
-                        <span className="animation__letter--color">D</span>
+                        <AnimationSpace />
+                        <ColorLetter>D</ColorLetter>
                         <AnimLetter letter="a" />
                         <AnimLetter letter="v" />
                         <AnimLetter letter="i" />
@@ -35,7 +40,7 @@ export default function HomePresentation() {
                         <AnimLetter letter="w" />
                         <AnimLetter letter="e" />
                         <AnimLetter letter="b" />
-                        <span className="animation__space"></span>
+                        <AnimationSpace />
                         <AnimLetter letter="d" />
                         <AnimLetter letter="e" />
                         <AnimLetter letter="v" />
@@ -45,12 +50,12 @@ export default function HomePresentation() {
                         <AnimLetter letter="p" />
                         <AnimLetter letter="e" />
                         <AnimLetter letter="r" />
-                    </h1>
-                    <p className="home__subtitle">Full Stack Developer</p>
+                    </HomeTitle>
+                    <HomeSubtitle>Full Stack Developer</HomeSubtitle>
                     <Button route="/contact" text="Contact me" />
-                </div>
+                </HomeWrapper>
                 <ScrollDown />
-            </section>
-        </>
+            </HomeContainer>
+        </SectionFull>
     )
 }
