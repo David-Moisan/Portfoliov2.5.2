@@ -1,4 +1,5 @@
 import React from 'react'
+import { Scroll } from './ScrollDownStyle'
 
 /**
  * ScrollDown
@@ -6,9 +7,9 @@ import React from 'react'
  */
 export default function ScrollDown() {
     return (
-        <div className='scroll-down'>
+        <Scroll>
             <span>scroll down</span>
-            <i className='fa fa-arrow-down' aria-hidden="true"></i>
-        </div>
+            <i className="fa fa-arrow-down" aria-hidden="true"></i>
+        </Scroll>
     )
 }

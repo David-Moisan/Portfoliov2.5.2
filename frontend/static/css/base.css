@@ -272,7 +272,7 @@ ul {
 }
 
 /*!SCROLL*/
-
+/* 
 .scroll-down {
     position: absolute;
     right: 0.89rem;
@@ -310,7 +310,7 @@ ul {
     100% {
         transform: translateY(0);
     }
-}
+} */
 
 /*!BUTTON*/
 /* .button,

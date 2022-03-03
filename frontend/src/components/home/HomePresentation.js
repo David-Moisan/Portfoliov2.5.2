@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimLetter from '../AnimLetter'
 import Button from '../Button/Button'
-import ScrollDown from '../ScrollDown'
+import ScrollDown from '../ScrollDown/ScrollDown'
 
 /**
  * Home Présentation

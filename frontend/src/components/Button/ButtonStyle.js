@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 export const ButtonStyled = styled(Link)`
     background-color: ${colors.background};
-    background-size: 0% 100%;
     color: ${colors.blueLight};
     font-size: 1.1rem;
     text-align: center;
@@ -22,6 +21,5 @@ export const ButtonStyled = styled(Link)`
     &:hover {
         color: ${colors.backgroundHover};
         background-color: ${colors.blueLight};
-        background-size: 100% 100%;
     }
 `
