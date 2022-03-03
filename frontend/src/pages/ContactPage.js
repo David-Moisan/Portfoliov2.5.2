@@ -1,6 +1,6 @@
 import React from 'react'
 import AnimLetter from '../components/AnimLetter'
-import BigBackgroundFont from '../components/BigBackgroundFont'
+import BigBackgroundFont from '../components/BigFont/BigBackgroundFont'
 import Button from '../components/Button/Button'
 
 /**

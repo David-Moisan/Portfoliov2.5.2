@@ -1,7 +1,7 @@
 import React from 'react'
 import Map from './Map'
 import AnimLetter from './AnimLetter'
-import BigBackgroundFont from './BigBackgroundFont'
+import BigBackgroundFont from './BigFont/BigBackgroundFont'
 import Button from './Button/Button'
 
 /**

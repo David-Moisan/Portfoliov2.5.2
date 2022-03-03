@@ -212,14 +212,15 @@ ul {
 }
 
 /*!BIG BACKGROUND FONT*/
-.big-font {
+/* .big-font {
     position: absolute;
     top: -13rem;
     font-size: 34rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.04);
+    color: #ffffff0a;
     z-index: -1;
-}
+    width: min-content;
+} */
 
 /*!ANIM LETTER*/
 .animation__letter {

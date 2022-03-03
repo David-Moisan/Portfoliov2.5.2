@@ -8,6 +8,7 @@ const colors = {
     blue: '#3f6096',
     blueLight: '#5aa9bf',
     boxShadow: '#141414',
+    bigFont: '#ffffff0a',
 }
 
 export default colors

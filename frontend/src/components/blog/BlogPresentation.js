@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import BigBackgroundFont from '../BigBackgroundFont'
+import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import ScrollDown from '../ScrollDown/ScrollDown'
 import { loadBlogPostFromAPI } from './api/http'
 
