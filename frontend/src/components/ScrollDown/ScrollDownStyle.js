@@ -31,4 +31,8 @@ export const Scroll = styled.div`
     & > i {
         margin-top: 0.89rem;
     }
+
+    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+        bottom: 5rem;
+    }
 `
