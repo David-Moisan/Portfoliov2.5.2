@@ -1,10 +1,10 @@
 import React from 'react'
-import WorkPresentation from "./project/WorkPresentation"
+import WorkPresentation from './WorkPresentation'
 
 /**
  * Project
- * ! Refactoring: supprimer ce fichier 
- * @returns le composant WorkPresentation 
+ * ! Refactoring: supprimer ce fichier
+ * @returns le composant WorkPresentation
  */
 export default function Project() {
     return (

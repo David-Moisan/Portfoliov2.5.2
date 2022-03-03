@@ -1,35 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Button from '../Button/Button'
 import AnimLetter from '../AnimLetter/AnimLetter'
 import { Link } from 'react-router-dom'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
-import { loadProjectFromAPI } from './api/http'
+import { useFetch } from '../../utils/hooks'
 
 /**
  * WorkPrésentation
- * ! Refactoring: "useFetch"
  * @returns une liste des 4 derniers projet trié par ordre de sortie
  */
 export default function WorkPresentation() {
-    const [project, setProject] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const { data, isLoading, error } = useFetch(
+        `https://davprocode.com/api/project/`
+    )
 
-    useEffect(() => {
-        loadProjectFromAPI()
-            .then((project) => {
-                setProject(project)
-            })
-            .catch((error) => {
-                console.error('Error fetching data : ', error)
-                setError(error)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [])
+    const project = data
 
-    if (loading)
+    if (isLoading)
         return <i className="fa fa-spinner spinner" aria-hidden="true"></i>
     if (error)
         return <i className="fa fa-times error-cross" aria-hidden="true"></i>
@@ -71,11 +58,10 @@ export default function WorkPresentation() {
             </div>
             <section className="projects">
                 <ul className="projects__list">
-                    {project.slice(0, 4).map((project, index) => (
+                    {project.slice(0, 4).map((project) => (
                         <li
                             className="project__item"
-                            key={index}
-                            id={project.id}
+                            key={project.id}
                             data-aos="fade-left"
                         >
                             <div className="project__content">

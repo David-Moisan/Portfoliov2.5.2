@@ -1,10 +1,10 @@
 import React from 'react'
-import BlogPresentation from './blog/BlogPresentation'
+import BlogPresentation from './BlogPresentation'
 
 /**
  * Blog
  * ! Refactoring: Rassembler les fichier
- * @returns le composant BlogPrésentation 
+ * @returns le composant BlogPrésentation
  */
 export default function Blog() {
     return (

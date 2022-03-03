@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { loadBlogPostFromAPI } from "../components/blog/api/http";
-import ListBlogPost from "../components/blog/components/ListBlogPost";
+import React from 'react'
+import ListBlogPost from '../components/blog/components/ListBlogPost'
+import { useFetch } from '../utils/hooks'
 
 /**
  * BlogListPage
@@ -8,30 +8,18 @@ import ListBlogPost from "../components/blog/components/ListBlogPost";
  * @returns l'ensemble des articles de blog
  */
 export default function BlogListPage() {
-  const [blog, setBlog] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+    const { data, isLoading, error } = useFetch(
+        `https://davprocode.com/api/blog/`
+    )
 
-  useEffect(() => {
-    loadBlogPostFromAPI()
-      .then((blog) => {
-        setBlog(blog);
-      })
-      .catch((error) => {
-        console.error("Error fetching data : ", error);
-        setError(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+    if (isLoading)
+        return <i className="fa fa-spinner spinner" aria-hidden="true"></i>
+    if (error)
+        return <i className="fa fa-times error-cross" aria-hidden="true"></i>
 
-  if (loading) return <i className="fa fa-spinner spinner" aria-hidden="true"></i>;
-  if (error) return <i className="fa fa-times error-cross" aria-hidden="true"></i>;
-
-  return (
-    <div>
-      <ListBlogPost blog={blog}/>
-    </div>
-  );
+    return (
+        <div>
+            <ListBlogPost blog={data} />
+        </div>
+    )
 }
