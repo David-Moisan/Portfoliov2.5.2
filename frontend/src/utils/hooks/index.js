@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
 /**
  * useFetch est un hook perso pour limiter le code dans l'app
@@ -33,8 +34,8 @@ export const useFetch = (url) => {
                     setData(data)
                 }
             } catch (error) {
-                setError(error.message)
-                console.log('Bad request ! code: 400')
+                console.log('Bad request !')
+                setError(true)
             } finally {
                 setLoading(false)
             }

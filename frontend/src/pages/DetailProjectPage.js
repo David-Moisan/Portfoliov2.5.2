@@ -29,14 +29,8 @@ export default function DetailProjectPage() {
     const project = data
 
     if (isLoading)
-        return <Spinner className="fa fa-spinner spinner" aria-hidden="true" />
-    if (error)
-        return (
-            <CrossError
-                className="fa fa-times error-cross"
-                aria-hidden="true"
-            />
-        )
+        return <Spinner className="fa fa-spinner" aria-hidden="true" />
+    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
 
     /**
      * createProject fonction qui permet récupérer l'ensemble du text du summernote django

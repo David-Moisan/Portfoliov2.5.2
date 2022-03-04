@@ -11,6 +11,10 @@ export const Spinner = styled.i`
     color: ${colors.blueLight};
 `
 export const CrossError = styled.i`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
     font-size: 2rem;
     color: ${colors.red};
