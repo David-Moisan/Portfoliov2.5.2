@@ -2,7 +2,7 @@ import React from 'react'
 import AnimLetter from '../AnimLetter/AnimLetter'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import Button from '../Button/Button'
-import { SectionFull } from '../../utils/style/SectionFull'
+import { SectionFull, Title } from '../../utils/style/GlobalSection'
 import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
 import {
     ContactContainer,
@@ -15,7 +15,6 @@ import {
     MapImage,
 } from './ContactStyle'
 import Map from '../../../static/source/map.png'
-import { Title } from '../../utils/style/SectionTitle'
 
 /**
  * Contact

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import { useFetch } from '../../utils/hooks'
 import { CrossError, Spinner } from '../../utils/style/LoadingDataStyle'
-import { SectionFull } from '../../utils/style/SectionFull'
+import { SectionFull, Title } from '../../utils/style/GlobalSection'
 import {
     WorkWrapper,
     WorkTitleContainer,
@@ -27,7 +27,6 @@ import {
     ProjectImageContainer,
 } from './WorkStyle'
 import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
-import { Title } from '../../utils/style/SectionTitle'
 
 /**
  * WorkPrésentation

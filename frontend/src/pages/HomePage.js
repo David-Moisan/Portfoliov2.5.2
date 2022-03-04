@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Animation from '../components/Home/Animation'
 import Project from '../components/project/Project'
-import About from '../components/About'
+import About from '../components/About/About'
 import Blog from '../components/blog/Blog'
 import Contact from '../components/Contact/Contact'
 import styled from 'styled-components'
-import { SectionFull } from '../utils/style/SectionFull'
+import { SectionFull } from '../utils/style/GlobalSection'
 import {
     HomeContainer,
     HomeSubtitle,
