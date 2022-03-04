@@ -25,6 +25,7 @@ import {
     ProjectImage,
     ProjectImageLink,
     ProjectImageContainer,
+    ProjectBlankLinkBtn,
 } from './WorkStyle'
 import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
 
@@ -93,15 +94,21 @@ export default function WorkPresentation() {
                                         >
                                             Case study
                                         </ProjectLinkBtn>
-                                        <ProjectLinkBtn
-                                            to={project.link}
+                                        <ProjectBlankLinkBtn
+                                            href={project.link}
+                                            target="_blank"
                                             className="project__github--link"
                                         >
-                                            <i
-                                                className="fa fa-github fa-2x"
-                                                aria-hidden="true"
-                                            ></i>
-                                        </ProjectLinkBtn>
+                                            {project.title ===
+                                            'Open The Way - PC Game' ? (
+                                                <i
+                                                    className="fa fa-youtube fa-2x"
+                                                    aria-hidden="true"
+                                                ></i>
+                                            ) : (
+                                                <i className="fa fa-github fa-2x"></i>
+                                            )}
+                                        </ProjectBlankLinkBtn>
                                     </ProjectLink>
                                     <ProjectTechList>
                                         {project.languages.map(

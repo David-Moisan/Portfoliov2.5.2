@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 
-export const DetailProjectPageHeader = styled.header`
+export const DetailPageHeader = styled.header`
     width: 100%;
 `
 
@@ -20,7 +20,7 @@ export const BackBtn = styled.div`
     }
 `
 
-export const DetailProjectWrapper = styled.main`
+export const DetailWrapper = styled.main`
     margin-top: 3.13rem;
     margin-bottom: 6.26rem;
     min-height: calc(100vh - 7.81rem);
@@ -29,24 +29,24 @@ export const DetailProjectWrapper = styled.main`
     background: ${colors.backgroundHover};
 `
 
-export const CaseProjectHeader = styled.div`
+export const DetailHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 3.13rem;
 `
-export const CaseProjectTitle = styled.h1`
+export const DetailTitle = styled.h1`
     font-size: 3rem;
     line-height: 4.38rem;
     margin-bottom: 1.25rem;
 `
-export const CaseProjectDate = styled.p`
+export const DetailDate = styled.p`
     color: ${colors.gray};
     font-size: 1.1rem;
     font-weight: 300;
 `
-export const CaseProjectLink = styled.div`
+export const DetailLink = styled.div`
     display: flex;
     align-items: center;
     margin: 0;
@@ -57,7 +57,7 @@ export const CaseProjectLink = styled.div`
         margin: 0;
     }
 `
-export const CaseProjectInfo = styled.section`
+export const DetailInfo = styled.section`
     margin-bottom: 4.38rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -66,7 +66,7 @@ export const CaseProjectInfo = styled.section`
 //Le content nécessite plusieurs règles de style sans pouvoir accéder directement
 // via le styled-components donc faire un fichier indépendant CSS
 
-export const CaseProjectImage = styled.div`
+export const DetailImage = styled.div`
     width: 100%;
     margin: 0.89rem 0;
     position: relative;

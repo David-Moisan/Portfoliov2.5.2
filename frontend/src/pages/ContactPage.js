@@ -1,8 +1,15 @@
 import React from 'react'
 import AnimLetter from '../components/AnimLetter/AnimLetter'
+import { AnimationSpace } from '../components/AnimLetter/AnimLetterStyle'
 import BigBackgroundFont from '../components/BigFont/BigBackgroundFont'
-import Button from '../components/Button/Button'
-import { Container, SectionFull } from '../utils/style/GlobalSection'
+import { ButtonAction } from '../components/Button/ButtonStyle'
+import {
+    ContactContainer,
+    ContactContent,
+    ContactForm,
+    ContactWrapper,
+} from '../components/Contact/ContactStyle'
+import { Container, SectionFull, Title } from '../utils/style/GlobalSection'
 
 /**
  * ContactPage
@@ -14,14 +21,10 @@ export default function ContactPage() {
         <Container>
             <SectionFull>
                 <BigBackgroundFont text="@" />
-                <section
-                    className="contact-page section-full"
-                    id="contact"
-                    data-aos="fade-right"
-                >
-                    <div className="contact-page__text">
+                <ContactContainer data-aos="fade-right">
+                    <ContactWrapper>
                         <header>
-                            <h2 className="header__title">
+                            <Title>
                                 <AnimLetter letter="C" />
                                 <AnimLetter letter="o" />
                                 <AnimLetter letter="n" />
@@ -29,24 +32,23 @@ export default function ContactPage() {
                                 <AnimLetter letter="a" />
                                 <AnimLetter letter="c" />
                                 <AnimLetter letter="t" />
-                                <span className="animation__space"></span>
+                                <AnimationSpace />
                                 <AnimLetter letter="m" />
                                 <AnimLetter letter="e" />
-                            </h2>
-                            <p>
+                            </Title>
+                            <ContactContent>
                                 I'm available immediately for any kind of web
                                 development || full stack mission. Do not
                                 hesitate to contact me via this contact form.
-                            </p>
+                            </ContactContent>
                         </header>
-                        <div className="contact__form">
-                            <Button
-                                route="mailto:admin@davprocode.com"
-                                text="Send !"
-                            ></Button>
-                        </div>
-                    </div>
-                </section>
+                        <ContactForm>
+                            <ButtonAction href="mailto:admin@davprocode.com">
+                                Send !
+                            </ButtonAction>
+                        </ContactForm>
+                    </ContactWrapper>
+                </ContactContainer>
             </SectionFull>
         </Container>
     )

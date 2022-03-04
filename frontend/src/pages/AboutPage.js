@@ -1,9 +1,15 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import ScrollDown from '../components/ScrollDown/ScrollDown'
 import AnimLetter from '../components/AnimLetter/AnimLetter'
 import Cloud from '../components/About/Cloud'
-import { Container, SectionFull } from '../utils/style/GlobalSection'
+import { Container, SectionFull, Title } from '../utils/style/GlobalSection'
+import {
+    AboutContainer,
+    AboutTextWrapper,
+    AboutText,
+    SkillContainer,
+} from '../components/About/AboutStyle'
+import { AnimationSpace } from '../components/AnimLetter/AnimLetterStyle'
 
 /**
  * AboutPage
@@ -14,21 +20,20 @@ export default function AboutPage() {
     return (
         <Container>
             <SectionFull>
-                <section className="about-page section-full" id="about">
-                    <ScrollDown />
-                    <div className="about-page__text" data-aos="fade-right">
+                <AboutContainer>
+                    <AboutTextWrapper data-aos="fade-right">
                         <header>
-                            <h2 className="header__title">
+                            <Title>
                                 <AnimLetter letter="M" />
                                 <AnimLetter letter="y" />
-                                <span className="animation__space"></span>
+                                <AnimationSpace />
                                 <AnimLetter letter="S" />
                                 <AnimLetter letter="t" />
                                 <AnimLetter letter="o" />
                                 <AnimLetter letter="r" />
                                 <AnimLetter letter="y" />
-                            </h2>
-                            <p>
+                            </Title>
+                            <AboutText>
                                 After a career in the French Army as a
                                 parachutist, I decided to retrain in the field
                                 of web development in 2020. I therefore resumed
@@ -38,20 +43,20 @@ export default function AboutPage() {
                                 Unfortunately, I did not find a work-study
                                 program to continue my studies in master's
                                 degree in computer engineering.
-                            </p>
-                            <p>
+                            </AboutText>
+                            <AboutText>
                                 Since I discovered IT development, I have never
                                 stopped learning every day, driven by curiosity
                                 and a growing passion.
-                            </p>
+                            </AboutText>
                         </header>
-                    </div>
+                    </AboutTextWrapper>
                     {isMobile ? null : (
-                        <div className="about-page__skill" data-aos="fade-left">
+                        <SkillContainer data-aos="fade-left">
                             <Cloud />
-                        </div>
+                        </SkillContainer>
                     )}
-                </section>
+                </AboutContainer>
             </SectionFull>
         </Container>
     )

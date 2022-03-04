@@ -14,6 +14,7 @@ import {
     ContactMapInfo,
     MapImage,
 } from './ContactStyle'
+import { ButtonAction } from '../Button/ButtonStyle'
 import Map from '../../../static/source/map.png'
 
 /**
@@ -47,10 +48,9 @@ export default function Contact() {
                         </ContactContent>
                     </header>
                     <ContactForm>
-                        <Button
-                            route="mailto:admin@davprocode.com"
-                            text="Send !"
-                        ></Button>
+                        <ButtonAction href="mailto:admin@davprocode.com">
+                            Send !
+                        </ButtonAction>
                     </ContactForm>
                 </ContactWrapper>
                 <ContactMapContainer data-aos="fade-left">

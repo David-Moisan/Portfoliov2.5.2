@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 
@@ -40,6 +41,7 @@ export const BlogContent = styled.div`
     margin-top: 0.89rem;
     display: block;
     max-width: 100%;
+    position: relative;
 `
 
 export const BlogTitle = styled.div`
@@ -67,5 +69,16 @@ export const BlogFooter = styled.footer`
         color: ${colors.blue};
         text-decoration: underline;
         transition: all 0.21s ease-in-out;
+    }
+`
+
+//Pour la page Blog (liste de tous les articles de blog avec l'image de couverture)
+export const BlogImgContainer = styled(Link)`
+    width: 100%;
+    height: 100%;
+
+    & > img {
+        max-width: 100%;
+        object-fit: cover;
     }
 `

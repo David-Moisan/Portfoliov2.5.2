@@ -60,28 +60,21 @@ export default function ProjectList(props) {
                                     >
                                         Case study
                                     </AllProjectLink>
-                                    {project.title ===
-                                    'Open The Way - PC Game' ? (
-                                        <AllProjectLinkGitHub
-                                            href={project.link}
-                                            target="_blank"
-                                        >
+
+                                    <AllProjectLinkGitHub
+                                        href={project.link}
+                                        target="_blank"
+                                    >
+                                        {project.title ===
+                                        'Open The Way - PC Game' ? (
                                             <i
                                                 className="fa fa-youtube fa-2x"
                                                 aria-hidden="true"
                                             ></i>
-                                        </AllProjectLinkGitHub>
-                                    ) : (
-                                        <AllProjectLinkGitHub
-                                            href={project.link}
-                                            target="_blank"
-                                        >
-                                            <i
-                                                className="fa fa-github fa-2x"
-                                                aria-hidden="true"
-                                            ></i>
-                                        </AllProjectLinkGitHub>
-                                    )}
+                                        ) : (
+                                            <i className="fa fa-github fa-2x"></i>
+                                        )}
+                                    </AllProjectLinkGitHub>
                                 </AllProjectBtn>
                                 <AllProjectTechList>
                                     {project.languages.map((lang, index) => (

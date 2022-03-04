@@ -1,5 +1,14 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+import {
+    BackBtn,
+    DetailHeader,
+    DetailImage,
+    DetailInfo,
+    DetailPageHeader,
+    DetailTitle,
+    DetailWrapper,
+} from '../components/DetailsTopic/DetailAllTopic'
 import { useFetch } from '../utils/hooks'
 import { Container, SectionFull } from '../utils/style/GlobalSection'
 import { CrossError, Spinner } from '../utils/style/LoadingDataStyle'
@@ -9,10 +18,16 @@ import { CrossError, Spinner } from '../utils/style/LoadingDataStyle'
  * @returns
  */
 export default function DetailBlogPostPage() {
+    /**
+     * Récupère le slug via l'API Django
+     */
     const { id } = useParams()
+
     const { data, isLoading, error } = useFetch(
-        `https://davprocode.com/api/blog/${id}/`
+        `https://davprocode.com/api/blog/${id}`
     )
+
+    const blog = data
 
     if (isLoading)
         return <Spinner className="fa fa-spinner" aria-hidden="true" />
@@ -31,52 +46,37 @@ export default function DetailBlogPostPage() {
     return (
         <Container>
             <SectionFull>
-                <section className="detail__blog full-page">
-                    <header>
-                        <div className="detail__blog--back">
-                            <Link to="/">
-                                <i
-                                    className="fa fa-arrow-left"
-                                    aria-hidden="true"
-                                ></i>
-                                Back
-                            </Link>
-                        </div>
-                    </header>
-                    <main className="detail__blog--wrapper">
-                        <section>
+                <DetailPageHeader>
+                    <BackBtn>
+                        <Link to="/">Back</Link>
+                    </BackBtn>
+                </DetailPageHeader>
+                <DetailWrapper>
+                    <DetailHeader>
+                        <DetailTitle>
+                            <h1>{blog.title}</h1>
                             <div
-                                className="detail__blog--title"
+                                className="detail__blog--category"
                                 style={{
-                                    borderTop:
-                                        '2px solid' +
-                                        blog.category.map((item) => item.color),
+                                    color: blog.category.map(
+                                        (item) => item.color
+                                    ),
                                 }}
                             >
-                                <h1>{blog.title}</h1>
-                                <div
-                                    className="detail__blog--category"
-                                    style={{
-                                        color: blog.category.map(
-                                            (item) => item.color
-                                        ),
-                                    }}
-                                >
-                                    {blog.category.map((item) => item.name)}
-                                </div>
+                                {blog.category.map((item) => item.name)}
                             </div>
-                        </section>
-                        <section className="blog__info">
-                            <aside
-                                className="blog__content"
-                                dangerouslySetInnerHTML={createBlog()}
-                            />
-                            <div className="blog__thumbnails">
-                                <img src={blog.thumbnails} alt={blog.title} />
-                            </div>
-                        </section>
-                    </main>
-                </section>
+                        </DetailTitle>
+                    </DetailHeader>
+                    <DetailInfo>
+                        <aside
+                            className="blog__content"
+                            dangerouslySetInnerHTML={createBlog()}
+                        />
+                        <DetailImage>
+                            <img src={blog.thumbnails} alt={blog.title} />
+                        </DetailImage>
+                    </DetailInfo>
+                </DetailWrapper>
             </SectionFull>
         </Container>
     )

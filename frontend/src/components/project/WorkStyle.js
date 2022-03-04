@@ -108,6 +108,24 @@ export const ProjectLinkBtn = styled(Link)`
         border-radius: 8px;
         margin-right: 10px;
     }
+`
+
+/**
+ * Button qui n'as pas besoin du Link react-router-dom
+ */
+
+export const ProjectBlankLinkBtn = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    color: ${colors.text};
+    cursor: pointer;
+    background: linear-gradient(134deg, ${colors.blueLight} 0%, ${colors.blue});
+    &:hover {
+        background: linear-gradient(134deg, ${colors.yellow} 0%, ${colors.red});
+        transition: all 0.21s ease-in-out;
+    }
     &.project__github--link {
         border-radius: 50%;
         text-align: center;

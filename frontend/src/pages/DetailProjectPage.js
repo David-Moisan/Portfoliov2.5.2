@@ -4,16 +4,16 @@ import { useFetch } from '../utils/hooks'
 import { Spinner, CrossError } from '../utils/style/LoadingDataStyle'
 import { Container, SectionFull } from '../utils/style/GlobalSection'
 import {
-    DetailProjectPageHeader,
+    DetailPageHeader,
     BackBtn,
-    DetailProjectWrapper,
-    CaseProjectHeader,
-    CaseProjectTitle,
-    CaseProjectDate,
-    CaseProjectLink,
-    CaseProjectInfo,
-    CaseProjectImage,
-} from '../components/project/DetailProjectStyle'
+    DetailHeader,
+    DetailTitle,
+    DetailDate,
+    DetailWrapper,
+    DetailLink,
+    DetailInfo,
+    DetailImage,
+} from '../components/DetailsTopic/DetailAllTopic'
 
 /**
  * Pour chaque projet cette page détails l'ensemble du projet
@@ -51,36 +51,36 @@ export default function DetailProjectPage() {
     return (
         <Container>
             <SectionFull>
-                <DetailProjectPageHeader>
+                <DetailPageHeader>
                     <BackBtn>
                         <Link to="/">Back</Link>
                     </BackBtn>
-                </DetailProjectPageHeader>
-                <DetailProjectWrapper>
-                    <CaseProjectHeader>
-                        <CaseProjectTitle>{project.title}</CaseProjectTitle>
-                        <CaseProjectDate>
+                </DetailPageHeader>
+                <DetailWrapper>
+                    <DetailHeader>
+                        <DetailTitle>{project.title}</DetailTitle>
+                        <DetailDate>
                             {project.day} - {project.month}
-                        </CaseProjectDate>
-                        <CaseProjectLink>
+                        </DetailDate>
+                        <DetailLink>
                             <a target="_blank" href={project.link}>
                                 <i
                                     className="fa fa-github fa-2x"
                                     aria-hidden="true"
                                 ></i>
                             </a>
-                        </CaseProjectLink>
-                    </CaseProjectHeader>
-                    <CaseProjectInfo>
+                        </DetailLink>
+                    </DetailHeader>
+                    <DetailInfo>
                         <div
                             className="case__content"
                             dangerouslySetInnerHTML={createProject()}
                         />
-                        <CaseProjectImage>
+                        <DetailImage>
                             <img src={project.thumbnails} alt={project.title} />
-                        </CaseProjectImage>
-                    </CaseProjectInfo>
-                </DetailProjectWrapper>
+                        </DetailImage>
+                    </DetailInfo>
+                </DetailWrapper>
             </SectionFull>
         </Container>
     )
