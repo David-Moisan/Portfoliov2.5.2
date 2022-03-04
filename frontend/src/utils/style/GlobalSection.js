@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from './colors'
 
 export const SectionFull = styled.section`
     min-height: 100vh;
