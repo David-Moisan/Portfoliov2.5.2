@@ -1,7 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, SectionFull } from '../../../utils/style/GlobalSection'
+import {
+    Container,
+    SectionFull,
+    Title,
+} from '../../../utils/style/GlobalSection'
 import AnimLetter from '../../AnimLetter/AnimLetter'
+import { AnimationSpace } from '../../AnimLetter/AnimLetterStyle'
+import {
+    AllProjectList,
+    AllProjectItem,
+    AllProjectContent,
+    AllProjectTitle,
+    AllProjectDescription,
+    AllProjectBtn,
+    AllProjectLink,
+    AllProjectLinkGitHub,
+    AllProjectTechList,
+    AllProjectImageContainer,
+    AllProjectImgWrapper,
+} from './ProjectListStyle'
 
 /**
  * ProjectList
@@ -12,83 +30,81 @@ export default function ProjectList(props) {
     return (
         <Container>
             <SectionFull>
-                <section className="all-projects">
-                    <h1 className="all-projects__head">
-                        <AnimLetter letter="A" />
-                        <AnimLetter letter="l" />
-                        <AnimLetter letter="l" />
-                        <span className="animation__space"></span>
-                        <AnimLetter letter="p" />
-                        <AnimLetter letter="r" />
-                        <AnimLetter letter="o" />
-                        <AnimLetter letter="j" />
-                        <AnimLetter letter="e" />
-                        <AnimLetter letter="c" />
-                        <AnimLetter letter="t" />
-                        <AnimLetter letter="s" />
-                    </h1>
-                    <ul className="all-projects__list">
-                        {props.project.map((project, index) => (
-                            <li
-                                className="all-projects__item"
-                                key={index}
-                                id={project.id}
-                            >
-                                <div className="all-projects__content">
-                                    <div>
-                                        <h2 className="all-projects__title">
-                                            {project.title}
-                                        </h2>
-                                        <div className="all-projects__description">
-                                            <p>{project.description}</p>
-                                        </div>
-                                        <div className="all-projects__link">
-                                            <Link
-                                                to={`/project/${project.id}`}
-                                                className="all-projects__detail--view"
-                                            >
-                                                Case study
-                                            </Link>
-                                            <a
-                                                href={project.link}
-                                                className="all-projects__github--link"
-                                            >
-                                                <i
-                                                    className="fa fa-github fa-2x"
-                                                    aria-hidden="true"
-                                                ></i>
-                                            </a>
-                                        </div>
-                                        <ul className="all-projects__languages">
-                                            {project.languages.map(
-                                                (lang, index) => (
-                                                    <li key={index}>
-                                                        {lang.name}
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="all-projects__image">
-                                    <Link
+                <Title>
+                    <AnimLetter letter="A" />
+                    <AnimLetter letter="l" />
+                    <AnimLetter letter="l" />
+                    <AnimationSpace />
+                    <AnimLetter letter="p" />
+                    <AnimLetter letter="r" />
+                    <AnimLetter letter="o" />
+                    <AnimLetter letter="j" />
+                    <AnimLetter letter="e" />
+                    <AnimLetter letter="c" />
+                    <AnimLetter letter="t" />
+                    <AnimLetter letter="s" />
+                </Title>
+                <AllProjectList>
+                    {props.project.map((project, index) => (
+                        <AllProjectItem key={index} id={project.id}>
+                            <AllProjectContent>
+                                <AllProjectTitle>
+                                    {project.title}
+                                </AllProjectTitle>
+                                <AllProjectDescription>
+                                    {project.description}
+                                </AllProjectDescription>
+                                <AllProjectBtn>
+                                    <AllProjectLink
                                         to={`/project/${project.id}`}
-                                        className="all-projects__detail--view"
                                     >
-                                        <div className="all-projects__image--block">
-                                            <div className="all-projects__image--wrapper">
-                                                <img
-                                                    src={project.thumbnails}
-                                                    alt={project.title}
-                                                />
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </section>
+                                        Case study
+                                    </AllProjectLink>
+                                    {project.title ===
+                                    'Open The Way - PC Game' ? (
+                                        <AllProjectLinkGitHub
+                                            href={project.link}
+                                            target="_blank"
+                                        >
+                                            <i
+                                                className="fa fa-youtube fa-2x"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </AllProjectLinkGitHub>
+                                    ) : (
+                                        <AllProjectLinkGitHub
+                                            href={project.link}
+                                            target="_blank"
+                                        >
+                                            <i
+                                                className="fa fa-github fa-2x"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </AllProjectLinkGitHub>
+                                    )}
+                                </AllProjectBtn>
+                                <AllProjectTechList>
+                                    {project.languages.map((lang, index) => (
+                                        <li key={index}>{lang.name}</li>
+                                    ))}
+                                </AllProjectTechList>
+                            </AllProjectContent>
+                            <AllProjectImageContainer>
+                                <Link
+                                    to={`/project/${project.id}`}
+                                    className="all-projects__detail--view"
+                                >
+                                    <AllProjectImgWrapper>
+                                        <img
+                                            src={project.thumbnails}
+                                            alt={project.title}
+                                        />
+                                    </AllProjectImgWrapper>
+                                </Link>
+                            </AllProjectImageContainer>
+                        </AllProjectItem>
+                    ))}
+                </AllProjectList>
             </SectionFull>
         </Container>
     )

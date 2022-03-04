@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const SectionFull = styled.section`
     min-height: 100vh;
-    padding: 0 3.45rem;
+    padding: 0 3.45rem 3.45rem 3.45rem;
     position: relative;
 
     @media only screen and (min-width: 320px) and (max-width: 1024px) {

@@ -90,7 +90,7 @@
     grid-area: 1 / 1 / auto / 3;
 }
 
-.all-projects__content > div {
+.all-projects__content>div {
     width: 75%;
 }
 
