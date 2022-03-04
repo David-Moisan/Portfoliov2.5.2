@@ -4,8 +4,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import styled from 'styled-components'
 
 const PageInner = styled.div`
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 `
 
 export default class Layout extends Component {

@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 import colors from './colors'
 
+export const Container = styled.div`
+    position: relative;
+    min-height: 100vh;
+    padding-left: 12rem;
+    width: 95%;
+
+    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+        padding-left: 0;
+    }
+`
+
 export const SectionFull = styled.section`
     min-height: 100vh;
     padding: 0 3.45rem;

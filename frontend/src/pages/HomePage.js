@@ -4,8 +4,7 @@ import Project from '../components/project/Project'
 import About from '../components/About/About'
 import Blog from '../components/blog/Blog'
 import Contact from '../components/Contact/Contact'
-import styled from 'styled-components'
-import { SectionFull } from '../utils/style/GlobalSection'
+import { Container, SectionFull } from '../utils/style/GlobalSection'
 import {
     HomeContainer,
     HomeSubtitle,
@@ -19,16 +18,6 @@ import {
 } from '../components/AnimLetter/AnimLetterStyle'
 import Button from '../components/Button/Button'
 import ScrollDown from '../components/ScrollDown/ScrollDown'
-
-const Container = styled.div`
-    position: relative;
-    min-height: 100vh;
-    padding-left: 13rem;
-
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
-        padding-left: 0;
-    }
-`
 
 /**
  * ! Refactoring: Mettre en cache l'animation ? via le Singleton Design Pattern

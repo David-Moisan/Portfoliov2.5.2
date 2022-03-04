@@ -14,7 +14,7 @@ const bounce = keyframes`
 
 export const Scroll = styled.div`
     position: absolute;
-    right: 0.89rem;
+    right: 1.1rem;
     bottom: 1.1rem;
     display: flex;
     flex-direction: column;

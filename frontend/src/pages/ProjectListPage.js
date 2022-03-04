@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectList from '../components/project/components/ProjectList'
 import { useFetch } from '../utils/hooks'
+import { Spinner, CrossError } from '../utils/style/LoadingDataStyle'
 
 /**
  * ProjectListPage appel l'API project
@@ -12,9 +13,8 @@ export default function ProjectListPage() {
     )
 
     if (isLoading)
-        return <i className="fa fa-spinner spinner" aria-hidden="true"></i>
-    if (error)
-        return <i className="fa fa-times error-cross" aria-hidden="true"></i>
+        return <Spinner className="fa fa-spinner" aria-hidden="true" />
+    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
 
     return (
         <>

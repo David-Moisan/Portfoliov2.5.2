@@ -1,6 +1,7 @@
 import React from 'react'
 import ListBlogPost from '../components/blog/components/ListBlogPost'
 import { useFetch } from '../utils/hooks'
+import { CrossError, Spinner } from '../utils/style/LoadingDataStyle'
 
 /**
  * BlogListPage
@@ -13,9 +14,8 @@ export default function BlogListPage() {
     )
 
     if (isLoading)
-        return <i className="fa fa-spinner spinner" aria-hidden="true"></i>
-    if (error)
-        return <i className="fa fa-times error-cross" aria-hidden="true"></i>
+        return <Spinner className="fa fa-spinner" aria-hidden="true" />
+    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
 
     return (
         <div>
