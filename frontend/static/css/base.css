@@ -157,7 +157,7 @@ ul {
     transition: var(--transitionOpacity);
 } */
 
-.spinner {
+/* .spinner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,13 +165,13 @@ ul {
     text-align: center;
     font-size: 3rem;
     color: var(--blueLightC);
-}
+} */
 
-.error-cross {
+/* .error-cross {
     text-align: center;
     font-size: 2rem;
     color: var(--objectHoverC);
-}
+} */
 
 /*!LOADING*/
 .loading {

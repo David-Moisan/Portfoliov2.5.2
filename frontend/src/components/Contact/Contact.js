@@ -7,7 +7,6 @@ import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
 import {
     ContactContainer,
     ContactWrapper,
-    ContactTitle,
     ContactContent,
     ContactForm,
     ContactMapContainer,
@@ -16,6 +15,7 @@ import {
     MapImage,
 } from './ContactStyle'
 import Map from '../../../static/source/map.png'
+import { Title } from '../../utils/style/SectionTitle'
 
 /**
  * Contact
@@ -29,7 +29,7 @@ export default function Contact() {
                 <BigBackgroundFont text="@" />
                 <ContactWrapper>
                     <header>
-                        <ContactTitle>
+                        <Title>
                             <AnimLetter letter="C" />
                             <AnimLetter letter="o" />
                             <AnimLetter letter="n" />
@@ -40,7 +40,7 @@ export default function Contact() {
                             <AnimationSpace />
                             <AnimLetter letter="m" />
                             <AnimLetter letter="e" />
-                        </ContactTitle>
+                        </Title>
                         <ContactContent>
                             I'm available immediately for any kind of web
                             development || full stack mission. Do not hesitate

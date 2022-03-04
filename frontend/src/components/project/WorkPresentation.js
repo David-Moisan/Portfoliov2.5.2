@@ -4,6 +4,30 @@ import AnimLetter from '../AnimLetter/AnimLetter'
 import { Link } from 'react-router-dom'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import { useFetch } from '../../utils/hooks'
+import { CrossError, Spinner } from '../../utils/style/LoadingDataStyle'
+import { SectionFull } from '../../utils/style/SectionFull'
+import {
+    WorkWrapper,
+    WorkTitleContainer,
+    WorkHeader,
+    WorkDescription,
+    WorkLink,
+    WorkBtnContainer,
+    MainProjectContainer,
+    ProjectList,
+    ProjectItem,
+    ProjectContent,
+    ProjectTitle,
+    ProjectDescription,
+    ProjectLink,
+    ProjectLinkBtn,
+    ProjectTechList,
+    ProjectImage,
+    ProjectImageLink,
+    ProjectImageContainer,
+} from './WorkStyle'
+import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
+import { Title } from '../../utils/style/SectionTitle'
 
 /**
  * WorkPrésentation
@@ -17,20 +41,19 @@ export default function WorkPresentation() {
     const project = data
 
     if (isLoading)
-        return <i className="fa fa-spinner spinner" aria-hidden="true"></i>
-    if (error)
-        return <i className="fa fa-times error-cross" aria-hidden="true"></i>
+        return <Spinner className="fa fa-spinner" aria-hidden="true" />
+    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
 
     return (
-        <section className="work section-full" id="work">
+        <SectionFull>
             <BigBackgroundFont text="Work" />
-            <div className="work__block--text" data-aos="fade-right">
-                <div>
-                    <header className="work__block--header">
-                        <h2 className="header__title">
+            <WorkWrapper data-aos="fade-right">
+                <WorkTitleContainer>
+                    <WorkHeader>
+                        <Title>
                             <AnimLetter letter="M" />
                             <AnimLetter letter="y" />
-                            <span className="animation__space"></span>
+                            <AnimationSpace />
                             <AnimLetter letter="P" />
                             <AnimLetter letter="o" />
                             <AnimLetter letter="r" />
@@ -40,83 +63,72 @@ export default function WorkPresentation() {
                             <AnimLetter letter="l" />
                             <AnimLetter letter="i" />
                             <AnimLetter letter="o" />
-                        </h2>
-                        <p>
+                        </Title>
+                        <WorkDescription>
                             Here is a small gallery of projects that I carried
                             out during my retraining, or in my personal time.{' '}
                             <br />
                             Are you interested? go see{' '}
-                            <Link to="/project" className="header__text--link">
-                                my work
-                            </Link>{' '}
-                        </p>
-                    </header>
-                </div>
-                <div>
+                            <WorkLink to="/project">my work</WorkLink>{' '}
+                        </WorkDescription>
+                    </WorkHeader>
+                </WorkTitleContainer>
+                <WorkBtnContainer>
                     <Button route="/project" text="See more !" />
-                </div>
-            </div>
-            <section className="projects">
-                <ul className="projects__list">
+                </WorkBtnContainer>
+            </WorkWrapper>
+            <MainProjectContainer>
+                <ProjectList>
                     {project.slice(0, 4).map((project) => (
-                        <li
-                            className="project__item"
-                            key={project.id}
-                            data-aos="fade-left"
-                        >
-                            <div className="project__content">
+                        <ProjectItem key={project.id} data-aos="fade-left">
+                            <ProjectContent>
                                 <div>
-                                    <h2 className="project__title">
-                                        {project.title}
-                                    </h2>
-                                    <div className="project__description">
+                                    <ProjectTitle>{project.title}</ProjectTitle>
+                                    <ProjectDescription>
                                         <p>{project.description}</p>
-                                    </div>
-                                    <div className="project__link">
-                                        <Link
+                                    </ProjectDescription>
+                                    <ProjectLink>
+                                        <ProjectLinkBtn
                                             to={`/project/${project.id}`}
                                             className="project__detail--view"
                                         >
                                             Case study
-                                        </Link>
-                                        <a
-                                            href={project.link}
+                                        </ProjectLinkBtn>
+                                        <ProjectLinkBtn
+                                            to={project.link}
                                             className="project__github--link"
                                         >
                                             <i
                                                 className="fa fa-github fa-2x"
                                                 aria-hidden="true"
                                             ></i>
-                                        </a>
-                                    </div>
-                                    <ul className="project__languages">
+                                        </ProjectLinkBtn>
+                                    </ProjectLink>
+                                    <ProjectTechList>
                                         {project.languages.map(
                                             (lang, index) => (
                                                 <li key={index}>{lang.name}</li>
                                             )
                                         )}
-                                    </ul>
+                                    </ProjectTechList>
                                 </div>
-                            </div>
-                            <div className="project__image">
-                                <Link
-                                    to={`/project/${project.id}`}
-                                    className="project__detail--view"
-                                >
-                                    <div className="project__image--block">
+                            </ProjectContent>
+                            <ProjectImage>
+                                <ProjectImageLink to={`/project/${project.id}`}>
+                                    <ProjectImageContainer>
                                         <div className="project__image--wrapper">
                                             <img
                                                 src={project.thumbnails}
                                                 alt={project.title}
                                             />
                                         </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        </li>
+                                    </ProjectImageContainer>
+                                </ProjectImageLink>
+                            </ProjectImage>
+                        </ProjectItem>
                     ))}
-                </ul>
-            </section>
-        </section>
+                </ProjectList>
+            </MainProjectContainer>
+        </SectionFull>
     )
 }

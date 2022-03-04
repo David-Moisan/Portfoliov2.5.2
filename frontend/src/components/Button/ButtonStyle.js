@@ -19,7 +19,12 @@ export const ButtonStyled = styled(Link)`
     box-shadow: 5px 8px 13px 3px ${colors.boxShadow};
     transition: color 0.21s ease-in-out;
     &:hover {
-        color: ${colors.backgroundHover};
-        background-color: ${colors.blueLight};
+        color: ${colors.text};
+        background: linear-gradient(
+            134deg,
+            ${colors.blueLight} 0%,
+            ${colors.blue}
+        );
+        transition: all 0.21s ease-in-out;
     }
 `

@@ -87,7 +87,11 @@ export const Menu = styled.nav`
         transition: all 0.21s ease-in;
     }
     & > a:hover {
-        background: ${colors.backgroundHover};
+        background: linear-gradient(
+            134deg,
+            ${colors.background} 0%,
+            ${colors.backgroundHover}
+        );
         color: ${colors.blueLight};
         transition: all 0.21s ease-out;
     }
