@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
 import ScrollDown from '../ScrollDown/ScrollDown'
+import { SectionFull } from '../../utils/style/GlobalSection'
+import {
+    BlogWrapper,
+    BlogPost,
+    BlogCategory,
+    BlogContent,
+    BlogTitle,
+    BlogFooter,
+} from '../blog/BlogStyle'
 
 /**
  * Blog Présentation
@@ -22,14 +31,13 @@ export default function BlogPresentation() {
         return <i className="fa fa-times error-cross" aria-hidden="true"></i>
 
     return (
-        <section className="blog section-full" id="blog">
+        <SectionFull>
             <BigBackgroundFont text="Blog" />
             <ScrollDown />
-            <div className="blog__articles" data-aos="fade-up">
+            <BlogWrapper data-aos="fade-up">
                 {blogArticles &&
                     blogArticles.slice(0, 6).map((article) => (
-                        <article
-                            className="blog__post"
+                        <BlogPost
                             key={article.id}
                             style={{
                                 borderTop: `2px solid ${blogArticles.map(
@@ -40,8 +48,7 @@ export default function BlogPresentation() {
                                 )}`,
                             }}
                         >
-                            <div
-                                className="blog__post--category"
+                            <BlogCategory
                                 style={{
                                     color: `${blogArticles.map((article) =>
                                         article.category.map(
@@ -55,27 +62,25 @@ export default function BlogPresentation() {
                                         (category) => category.name
                                     )
                                 )}
-                            </div>
-                            <div className="blog__post--content">
-                                <div className="blog__post--title">
+                            </BlogCategory>
+                            <BlogContent>
+                                <BlogTitle>
                                     <h5>
                                         <Link to={`/blog/${article.slug}`}>
                                             {article.title}
                                         </Link>
                                     </h5>
-                                </div>
+                                </BlogTitle>
                                 <div className="blog__post--description">
                                     {article.description}
                                 </div>
-                            </div>
-                        </article>
+                            </BlogContent>
+                        </BlogPost>
                     ))}
-            </div>
-            <footer className="blog__footer">
-                <Link to="/blog" className="blog__footer--link">
-                    Read more articles
-                </Link>
-            </footer>
-        </section>
+            </BlogWrapper>
+            <BlogFooter>
+                <Link to="/blog">Read more articles</Link>
+            </BlogFooter>
+        </SectionFull>
     )
 }
