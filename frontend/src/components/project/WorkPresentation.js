@@ -45,8 +45,7 @@ export default function WorkPresentation() {
     return (
         <SectionFull>
             <BigBackgroundFont text="Work" />
-            {/* data-aos="fade-right" */}
-            <WorkWrapper>
+            <WorkWrapper data-aos="fade-up">
                 <div>
                     <WorkHeader>
                         <Title>
@@ -79,8 +78,7 @@ export default function WorkPresentation() {
             <MainProjectContainer>
                 {project.slice(0, 4).map((project) => (
                     <ProjectWrapper>
-                        {/* data-aos="fade-left" */}
-                        <ProjectContent key={project.id}>
+                        <ProjectContent key={project.id} data-aos="fade-up">
                             <ProjectDetail>
                                 <ProjectDetailContainer>
                                     <ProjectTitle>{project.title}</ProjectTitle>

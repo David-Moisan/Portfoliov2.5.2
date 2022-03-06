@@ -50,8 +50,7 @@ export default function Contact() {
                         </ButtonAction>
                     </div>
                 </ContactWrapper>
-                {/* data-aos="fade-left" */}
-                <ContactMapContainer>
+                <ContactMapContainer data-aos="fade-up">
                     <div>
                         <ContactMapInfo>
                             David Moisan

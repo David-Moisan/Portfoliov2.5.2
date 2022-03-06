@@ -30,8 +30,7 @@ export default class HomePage extends Component {
                 {/* <Animation /> */}
                 <SectionFull>
                     <HomeContainer>
-                        {/* data-aos="fade-right" */}
-                        <HomeWrapper>
+                        <HomeWrapper data-aos="fade-down">
                             <HomeTitle>
                                 <AnimLetter letter="H" />
                                 <AnimLetter letter="i" />

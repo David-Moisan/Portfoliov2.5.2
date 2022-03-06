@@ -22,8 +22,7 @@ export default function About() {
         <SectionFull>
             <AboutContainer>
                 <ScrollDown />
-                {/* data-aos="fade-right" */}
-                <AboutTextWrapper>
+                <AboutTextWrapper data-aos="fade-up">
                     <header>
                         <Title>
                             <AnimLetter letter="M" />
@@ -53,8 +52,7 @@ export default function About() {
                     </header>
                 </AboutTextWrapper>
                 {isMobile ? null : (
-                    /* data-aos="fade-left" */
-                    <SkillContainer>
+                    <SkillContainer data-aos="fade-down">
                         <Cloud />
                     </SkillContainer>
                 )}
