@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding-left: 12rem;
     width: 95%;
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
         padding-left: 0;
     }
 `
@@ -17,9 +17,8 @@ export const SectionFull = styled.section`
     padding: 0 3.45rem 3.45rem 3.45rem;
     position: relative;
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 320px) and (max-width: 424px) {
         padding: 0 1rem;
-        min-height: 50vh;
     }
 `
 
@@ -31,12 +30,12 @@ export const Title = styled.h1`
     margin-bottom: 1.1rem;
     color: ${colors.blueLight};
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         font-size: 3.55rem;
         line-height: normal;
     }
 
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 767px) {
         font-size: 2.89rem;
     }
 `

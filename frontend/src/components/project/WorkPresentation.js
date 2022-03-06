@@ -7,24 +7,23 @@ import { CrossError, Spinner } from '../../utils/style/LoadingDataStyle'
 import { SectionFull, Title } from '../../utils/style/GlobalSection'
 import {
     WorkWrapper,
-    WorkTitleContainer,
     WorkHeader,
     WorkDescription,
     WorkLink,
-    WorkBtnContainer,
     MainProjectContainer,
-    ProjectList,
-    ProjectItem,
+    ProjectWrapper,
     ProjectContent,
+    ProjectDetail,
+    ProjectDetailContainer,
     ProjectTitle,
     ProjectDescription,
     ProjectLink,
     ProjectLinkBtn,
-    ProjectTechList,
-    ProjectImage,
-    ProjectImageLink,
-    ProjectImageContainer,
     ProjectBlankLinkBtn,
+    ProjectPreview,
+    ProjectImageWrapper,
+    ProjectTechList,
+    ProjectTechTag,
 } from './WorkStyle'
 import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
 
@@ -47,7 +46,7 @@ export default function WorkPresentation() {
         <SectionFull>
             <BigBackgroundFont text="Work" />
             <WorkWrapper data-aos="fade-right">
-                <WorkTitleContainer>
+                <div>
                     <WorkHeader>
                         <Title>
                             <AnimLetter letter="M" />
@@ -71,20 +70,20 @@ export default function WorkPresentation() {
                             <WorkLink to="/project">my work</WorkLink>{' '}
                         </WorkDescription>
                     </WorkHeader>
-                </WorkTitleContainer>
-                <WorkBtnContainer>
+                </div>
+                <div>
                     <Button route="/project" text="See more !" />
-                </WorkBtnContainer>
+                </div>
             </WorkWrapper>
             <MainProjectContainer>
-                <ProjectList>
-                    {project.slice(0, 4).map((project) => (
-                        <ProjectItem key={project.id} data-aos="fade-left">
-                            <ProjectContent>
-                                <div>
+                {project.slice(0, 4).map((project) => (
+                    <ProjectWrapper>
+                        <ProjectContent key={project.id} data-aos="fade-left">
+                            <ProjectDetail>
+                                <ProjectDetailContainer>
                                     <ProjectTitle>{project.title}</ProjectTitle>
                                     <ProjectDescription>
-                                        <p>{project.description}</p>
+                                        {project.description}
                                     </ProjectDescription>
                                     <ProjectLink>
                                         <ProjectLinkBtn
@@ -109,6 +108,16 @@ export default function WorkPresentation() {
                                             )}
                                         </ProjectBlankLinkBtn>
                                     </ProjectLink>
+                                </ProjectDetailContainer>
+                            </ProjectDetail>
+                            <ProjectPreview>
+                                <ProjectImageWrapper>
+                                    <img
+                                        src={project.thumbnails}
+                                        alt={project.title}
+                                    />
+                                </ProjectImageWrapper>
+                                <ProjectTechTag>
                                     <ProjectTechList>
                                         {project.languages.map(
                                             (lang, index) => (
@@ -116,23 +125,11 @@ export default function WorkPresentation() {
                                             )
                                         )}
                                     </ProjectTechList>
-                                </div>
-                            </ProjectContent>
-                            <ProjectImage>
-                                <ProjectImageLink to={`/project/${project.id}`}>
-                                    <ProjectImageContainer>
-                                        <div className="project__image--wrapper">
-                                            <img
-                                                src={project.thumbnails}
-                                                alt={project.title}
-                                            />
-                                        </div>
-                                    </ProjectImageContainer>
-                                </ProjectImageLink>
-                            </ProjectImage>
-                        </ProjectItem>
-                    ))}
-                </ProjectList>
+                                </ProjectTechTag>
+                            </ProjectPreview>
+                        </ProjectContent>
+                    </ProjectWrapper>
+                ))}
             </MainProjectContainer>
         </SectionFull>
     )

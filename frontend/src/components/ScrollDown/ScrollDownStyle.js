@@ -14,11 +14,12 @@ const bounce = keyframes`
 
 export const Scroll = styled.div`
     position: absolute;
-    right: 1.1rem;
+    right: 0.89rem;
     bottom: 1.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
     font-weight: 300;
     -webkit-box-direction: normal;
@@ -33,6 +34,6 @@ export const Scroll = styled.div`
     }
 
     @media only screen and (min-width: 320px) and (max-width: 1024px) {
-        bottom: 5rem;
+        display: none;
     }
 `

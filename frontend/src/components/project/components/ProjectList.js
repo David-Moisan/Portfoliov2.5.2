@@ -8,18 +8,21 @@ import {
 import AnimLetter from '../../AnimLetter/AnimLetter'
 import { AnimationSpace } from '../../AnimLetter/AnimLetterStyle'
 import {
-    AllProjectList,
-    AllProjectItem,
-    AllProjectContent,
-    AllProjectTitle,
-    AllProjectDescription,
-    AllProjectBtn,
-    AllProjectLink,
-    AllProjectLinkGitHub,
-    AllProjectTechList,
-    AllProjectImageContainer,
-    AllProjectImgWrapper,
-} from './ProjectListStyle'
+    MainProjectContainer,
+    ProjectBlankLinkBtn,
+    ProjectContent,
+    ProjectDescription,
+    ProjectDetail,
+    ProjectDetailContainer,
+    ProjectImageWrapper,
+    ProjectLink,
+    ProjectLinkBtn,
+    ProjectPreview,
+    ProjectTechList,
+    ProjectTechTag,
+    ProjectTitle,
+    ProjectWrapper,
+} from '../WorkStyle'
 
 /**
  * ProjectList
@@ -30,7 +33,7 @@ export default function ProjectList(props) {
     return (
         <Container>
             <SectionFull>
-                <Title>
+                <Title style={{ textAlign: 'center' }}>
                     <AnimLetter letter="A" />
                     <AnimLetter letter="l" />
                     <AnimLetter letter="l" />
@@ -44,60 +47,63 @@ export default function ProjectList(props) {
                     <AnimLetter letter="t" />
                     <AnimLetter letter="s" />
                 </Title>
-                <AllProjectList>
+                <MainProjectContainer>
                     {props.project.map((project, index) => (
-                        <AllProjectItem key={index} id={project.id}>
-                            <AllProjectContent>
-                                <AllProjectTitle>
-                                    {project.title}
-                                </AllProjectTitle>
-                                <AllProjectDescription>
-                                    {project.description}
-                                </AllProjectDescription>
-                                <AllProjectBtn>
-                                    <AllProjectLink
-                                        to={`/project/${project.id}`}
-                                    >
-                                        Case study
-                                    </AllProjectLink>
+                        <ProjectWrapper>
+                            <ProjectContent key={index} id={project.id}>
+                                <ProjectDetail>
+                                    <ProjectDetailContainer>
+                                        <ProjectTitle>
+                                            {project.title}
+                                        </ProjectTitle>
+                                        <ProjectDescription>
+                                            {project.description}
+                                        </ProjectDescription>
+                                        <ProjectLink>
+                                            <ProjectLinkBtn
+                                                to={`/project/${project.id}`}
+                                            >
+                                                Case study
+                                            </ProjectLinkBtn>
 
-                                    <AllProjectLinkGitHub
-                                        href={project.link}
-                                        target="_blank"
-                                    >
-                                        {project.title ===
-                                        'Open The Way - PC Game' ? (
-                                            <i
-                                                className="fa fa-youtube fa-2x"
-                                                aria-hidden="true"
-                                            ></i>
-                                        ) : (
-                                            <i className="fa fa-github fa-2x"></i>
+                                            <ProjectBlankLinkBtn
+                                                href={project.link}
+                                                target="_blank"
+                                            >
+                                                {project.title ===
+                                                'Open The Way - PC Game' ? (
+                                                    <i
+                                                        className="fa fa-youtube fa-2x"
+                                                        aria-hidden="true"
+                                                    ></i>
+                                                ) : (
+                                                    <i className="fa fa-github fa-2x"></i>
+                                                )}
+                                            </ProjectBlankLinkBtn>
+                                        </ProjectLink>
+                                    </ProjectDetailContainer>
+                                </ProjectDetail>
+                            </ProjectContent>
+                            <ProjectPreview>
+                                <ProjectImageWrapper>
+                                    <img
+                                        src={project.thumbnails}
+                                        alt={project.title}
+                                    />
+                                </ProjectImageWrapper>
+                                <ProjectTechTag>
+                                    <ProjectTechList>
+                                        {project.languages.map(
+                                            (lang, index) => (
+                                                <li key={index}>{lang.name}</li>
+                                            )
                                         )}
-                                    </AllProjectLinkGitHub>
-                                </AllProjectBtn>
-                                <AllProjectTechList>
-                                    {project.languages.map((lang, index) => (
-                                        <li key={index}>{lang.name}</li>
-                                    ))}
-                                </AllProjectTechList>
-                            </AllProjectContent>
-                            <AllProjectImageContainer>
-                                <Link
-                                    to={`/project/${project.id}`}
-                                    className="all-projects__detail--view"
-                                >
-                                    <AllProjectImgWrapper>
-                                        <img
-                                            src={project.thumbnails}
-                                            alt={project.title}
-                                        />
-                                    </AllProjectImgWrapper>
-                                </Link>
-                            </AllProjectImageContainer>
-                        </AllProjectItem>
+                                    </ProjectTechList>
+                                </ProjectTechTag>
+                            </ProjectPreview>
+                        </ProjectWrapper>
                     ))}
-                </AllProjectList>
+                </MainProjectContainer>
             </SectionFull>
         </Container>
     )

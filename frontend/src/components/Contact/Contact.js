@@ -21,7 +21,7 @@ import Map from '../../../static/source/map.png'
  */
 export default function Contact() {
     return (
-        <SectionFull>
+        <SectionFull className="contact-section">
             <ContactContainer>
                 <BigBackgroundFont text="@" />
                 <ContactWrapper>

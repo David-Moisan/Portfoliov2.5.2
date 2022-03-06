@@ -19,21 +19,27 @@ export const HomeTitle = styled.h1`
     line-height: 8.7rem;
     margin: 0;
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         font-size: 4rem;
         line-height: normal;
     }
 
-    @media only screen and (max-width: 320px) {
-        font-size: 2rem;
+    @media only screen and (max-width: 767px) {
+        font-size: 2.4rem;
+        line-height: normal;
     }
 `
 
 export const HomeSubtitle = styled.p`
+    position: relative;
     font-weight: 300;
     letter-spacing: 4px;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
     display: block;
     color: ${colors.gray};
+
+    @media only screen and (max-width: 767px) {
+        font-size: 1.2rem;
+    }
 `

@@ -7,6 +7,14 @@ export const BlogWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 5rem;
+
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+        padding: 0;
+
+        & > article {
+            width: 100%;
+        }
+    }
 `
 export const BlogPost = styled.article`
     margin-bottom: 2.5rem;
@@ -35,10 +43,10 @@ export const BlogCategory = styled.div`
     display: block;
 `
 export const BlogContent = styled.div`
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
-    margin-top: 0.89rem;
+    margin-top: 0.94rem;
     display: block;
     max-width: 100%;
     position: relative;

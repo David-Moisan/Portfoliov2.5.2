@@ -9,7 +9,7 @@ export const ContactContainer = styled.div`
     min-height: 100vh;
     width: 95%;
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 320px) and (max-width: 959px) {
         flex-direction: column;
     }
 `
@@ -28,10 +28,9 @@ export const ContactWrapper = styled.div`
         right: 0;
     }
 
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 320px) and (max-width: 959px) {
         width: 100%;
         padding-right: 0;
-        padding-bottom: 13vh;
     }
 `
 
@@ -46,6 +45,10 @@ export const ContactMapContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (min-width: 320px) and (max-width: 959px) {
+        display: none;
+    }
 `
 
 export const ContactMapInfo = styled.div`
@@ -53,11 +56,11 @@ export const ContactMapInfo = styled.div`
     background: ${colors.background};
     border: 1px solid ${colors.yellow};
     box-shadow: 0px 8px 8px 0px #000;
-    top: 4rem;
+    top: 50px;
     left: 5rem;
     z-index: 1000;
-    width: 16.625rem;
-    padding: 1.3125rem;
+    width: 266px;
+    padding: 21px;
     color: ${colors.text};
     font-size: 1.1rem;
     font-weight: 300;
