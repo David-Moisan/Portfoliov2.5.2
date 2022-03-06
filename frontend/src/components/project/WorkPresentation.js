@@ -45,7 +45,8 @@ export default function WorkPresentation() {
     return (
         <SectionFull>
             <BigBackgroundFont text="Work" />
-            <WorkWrapper data-aos="fade-right">
+            {/* data-aos="fade-right" */}
+            <WorkWrapper>
                 <div>
                     <WorkHeader>
                         <Title>
@@ -78,7 +79,8 @@ export default function WorkPresentation() {
             <MainProjectContainer>
                 {project.slice(0, 4).map((project) => (
                     <ProjectWrapper>
-                        <ProjectContent key={project.id} data-aos="fade-left">
+                        {/* data-aos="fade-left" */}
+                        <ProjectContent key={project.id}>
                             <ProjectDetail>
                                 <ProjectDetailContainer>
                                     <ProjectTitle>{project.title}</ProjectTitle>
@@ -88,14 +90,12 @@ export default function WorkPresentation() {
                                     <ProjectLink>
                                         <ProjectLinkBtn
                                             to={`/project/${project.id}`}
-                                            className="project__detail--view"
                                         >
                                             Case study
                                         </ProjectLinkBtn>
                                         <ProjectBlankLinkBtn
                                             href={project.link}
                                             target="_blank"
-                                            className="project__github--link"
                                         >
                                             {project.title ===
                                             'Open The Way - PC Game' ? (

@@ -21,7 +21,7 @@ import Map from '../../../static/source/map.png'
  */
 export default function Contact() {
     return (
-        <SectionFull className="contact-section">
+        <SectionFull>
             <ContactContainer>
                 <BigBackgroundFont text="@" />
                 <ContactWrapper>
@@ -50,7 +50,8 @@ export default function Contact() {
                         </ButtonAction>
                     </div>
                 </ContactWrapper>
-                <ContactMapContainer data-aos="fade-left">
+                {/* data-aos="fade-left" */}
+                <ContactMapContainer>
                     <div>
                         <ContactMapInfo>
                             David Moisan

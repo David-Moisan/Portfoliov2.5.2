@@ -5,7 +5,7 @@ export const Container = styled.div`
     position: relative;
     min-height: 100vh;
     padding-left: 12rem;
-    width: 95%;
+    width: 100%;
 
     @media only screen and (min-width: 320px) and (max-width: 768px) {
         padding-left: 0;

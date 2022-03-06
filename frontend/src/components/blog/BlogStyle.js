@@ -8,7 +8,7 @@ export const BlogWrapper = styled.div`
     justify-content: space-between;
     padding: 0 5rem;
 
-    @media only screen and (min-width: 320px) and (max-width: 768px) {
+    @media only screen and (min-width: 320px) and (max-width: 1200px) {
         padding: 0;
 
         & > article {

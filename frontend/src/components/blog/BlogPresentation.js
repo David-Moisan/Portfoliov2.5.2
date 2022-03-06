@@ -33,7 +33,8 @@ export default function BlogPresentation() {
         <SectionFull>
             <BigBackgroundFont text="Blog" />
             <ScrollDown />
-            <BlogWrapper data-aos="fade-up">
+            {/* data-aos="fade-up" */}
+            <BlogWrapper>
                 {blogArticles &&
                     blogArticles.slice(0, 6).map((article) => (
                         <BlogPost
