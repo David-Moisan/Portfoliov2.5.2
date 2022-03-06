@@ -11,7 +11,11 @@ import {
 } from '../components/DetailsTopic/DetailAllTopic'
 import { useFetch } from '../utils/hooks'
 import { Container, SectionFull } from '../utils/style/GlobalSection'
-import { CrossError, Spinner } from '../utils/style/LoadingDataStyle'
+import {
+    CrossError,
+    ErrorWrapper,
+    Spinner,
+} from '../utils/style/LoadingDataStyle'
 
 /**
  * Pour chaque post cette page détails l'ensemble de l'article de blog
@@ -31,7 +35,15 @@ export default function DetailBlogPostPage() {
 
     if (isLoading)
         return <Spinner className="fa fa-spinner" aria-hidden="true" />
-    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
+    if (error)
+        return (
+            <SectionFull>
+                <ErrorWrapper>
+                    <div>This article don't exist !</div>
+                    <CrossError className="fa fa-times" aria-hidden="true" />
+                </ErrorWrapper>
+            </SectionFull>
+        )
 
     /**
      * createBlog fonction qui permet récupérer l'ensemble du text du summernote django

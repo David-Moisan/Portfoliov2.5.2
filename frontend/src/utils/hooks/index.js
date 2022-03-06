@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Redirect } from 'react-router-dom'
 
 /**
  * useFetch est un hook perso pour limiter le code dans l'app

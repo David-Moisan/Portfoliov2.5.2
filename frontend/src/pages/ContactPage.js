@@ -6,7 +6,6 @@ import { ButtonAction } from '../components/Button/ButtonStyle'
 import {
     ContactContainer,
     ContactContent,
-    ContactForm,
     ContactWrapper,
 } from '../components/Contact/ContactStyle'
 import { Container, SectionFull, Title } from '../utils/style/GlobalSection'
@@ -42,11 +41,11 @@ export default function ContactPage() {
                                 hesitate to contact me via this contact form.
                             </ContactContent>
                         </header>
-                        <ContactForm>
+                        <div>
                             <ButtonAction href="mailto:admin@davprocode.com">
                                 Send !
                             </ButtonAction>
-                        </ContactForm>
+                        </div>
                     </ContactWrapper>
                 </ContactContainer>
             </SectionFull>

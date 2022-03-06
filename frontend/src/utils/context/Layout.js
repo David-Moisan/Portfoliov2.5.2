@@ -23,9 +23,9 @@ export default class Layout extends Component {
     }
 
     render() {
-        if (this.state.loading) {
+        /* if (this.state.loading) {
             return <Loading />
-        }
+        } */
         return (
             <PageInner>
                 <Navbar />

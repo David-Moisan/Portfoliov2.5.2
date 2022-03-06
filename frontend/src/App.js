@@ -9,6 +9,7 @@ import DetailProjectPage from './pages/DetailProjectPage'
 import DetailBlogPostPage from './pages/DetailBlogPostPage'
 import ContactPage from './pages/ContactPage'
 import AboutPage from './pages/AboutPage'
+import NotFound from './components/Error/NotFound'
 import GlobalStyle from './utils/style/GlobalStyle'
 
 export default class App extends Component {
@@ -35,6 +36,7 @@ export default class App extends Component {
                                 element={<DetailBlogPostPage />}
                             />
                             <Route path="/contact" element={<ContactPage />} />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </Layout>
                 </BrowserRouter>

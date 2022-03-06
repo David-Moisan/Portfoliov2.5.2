@@ -10,12 +10,18 @@ export const Spinner = styled.i`
     font-size: 3rem;
     color: ${colors.blueLight};
 `
-export const CrossError = styled.i`
+
+export const ErrorWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: center;
     min-height: 100vh;
     text-align: center;
+    text-align: center;
+`
+
+export const CrossError = styled.i`
     font-size: 2rem;
     color: ${colors.red};
 `

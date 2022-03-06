@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useFetch } from '../utils/hooks'
-import { Spinner, CrossError } from '../utils/style/LoadingDataStyle'
+import {
+    Spinner,
+    CrossError,
+    ErrorWrapper,
+} from '../utils/style/LoadingDataStyle'
 import { Container, SectionFull } from '../utils/style/GlobalSection'
 import {
     DetailPageHeader,
@@ -30,7 +34,15 @@ export default function DetailProjectPage() {
 
     if (isLoading)
         return <Spinner className="fa fa-spinner" aria-hidden="true" />
-    if (error) return <CrossError className="fa fa-times" aria-hidden="true" />
+    if (error)
+        return (
+            <SectionFull>
+                <ErrorWrapper>
+                    <div>This project don't exist !</div>
+                    <CrossError className="fa fa-times" aria-hidden="true" />
+                </ErrorWrapper>
+            </SectionFull>
+        )
 
     /**
      * createProject fonction qui permet récupérer l'ensemble du text du summernote django

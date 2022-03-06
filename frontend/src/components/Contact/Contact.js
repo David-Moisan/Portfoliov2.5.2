@@ -1,17 +1,14 @@
 import React from 'react'
 import AnimLetter from '../AnimLetter/AnimLetter'
 import BigBackgroundFont from '../BigFont/BigBackgroundFont'
-import Button from '../Button/Button'
 import { SectionFull, Title } from '../../utils/style/GlobalSection'
 import { AnimationSpace } from '../AnimLetter/AnimLetterStyle'
 import {
     ContactContainer,
-    ContactWrapper,
     ContactContent,
-    ContactForm,
     ContactMapContainer,
-    ContactInfoContainer,
     ContactMapInfo,
+    ContactWrapper,
     MapImage,
 } from './ContactStyle'
 import { ButtonAction } from '../Button/ButtonStyle'
@@ -47,14 +44,14 @@ export default function Contact() {
                             to contact me via this contact form.
                         </ContactContent>
                     </header>
-                    <ContactForm>
+                    <div>
                         <ButtonAction href="mailto:admin@davprocode.com">
                             Send !
                         </ButtonAction>
-                    </ContactForm>
+                    </div>
                 </ContactWrapper>
                 <ContactMapContainer data-aos="fade-left">
-                    <ContactInfoContainer>
+                    <div>
                         <ContactMapInfo>
                             David Moisan
                             <br />
@@ -70,7 +67,7 @@ export default function Contact() {
                             </span>
                         </ContactMapInfo>
                         <MapImage src={Map} alt="ma position" />
-                    </ContactInfoContainer>
+                    </div>
                 </ContactMapContainer>
             </ContactContainer>
         </SectionFull>
