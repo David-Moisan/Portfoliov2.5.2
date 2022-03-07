@@ -77,8 +77,8 @@ export default function WorkPresentation() {
             </WorkWrapper>
             <MainProjectContainer>
                 {project.slice(0, 4).map((project) => (
-                    <ProjectWrapper>
-                        <ProjectContent key={project.id} data-aos="fade-up">
+                    <ProjectWrapper key={project.id}>
+                        <ProjectContent data-aos="fade-up">
                             <ProjectDetail>
                                 <ProjectDetailContainer>
                                     <ProjectTitle>{project.title}</ProjectTitle>

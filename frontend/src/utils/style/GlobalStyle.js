@@ -25,6 +25,20 @@ const StyledGlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    #container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        
+        &> canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
 `
 
 const GlobalStyle = () => {

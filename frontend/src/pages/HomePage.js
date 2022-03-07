@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Animation from '../components/Home/Animation'
 import Project from '../components/project/Project'
 import About from '../components/About/About'
 import Blog from '../components/blog/Blog'
@@ -27,7 +26,6 @@ export default class HomePage extends Component {
     render() {
         return (
             <Container>
-                {/* <Animation /> */}
                 <SectionFull>
                     <HomeContainer>
                         <HomeWrapper data-aos="fade-down">
