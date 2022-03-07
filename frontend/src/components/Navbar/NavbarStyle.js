@@ -16,7 +16,7 @@ export const Container = styled.menu`
     width: 13rem;
     z-index: 1000;
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (min-width: 320px) and (max-width: 769px) {
         width: 100%;
         height: 4.5rem;
         background: ${colors.backgroundHover};
@@ -47,7 +47,7 @@ export const TopNavbar = styled.div`
         color: ${colors.gray};
         margin-top: 1rem;
     }
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (min-width: 320px) and (max-width: 769px) {
         display: none;
     }
 `
@@ -96,7 +96,7 @@ export const Menu = styled.nav`
         transition: all 0.21s ease-out;
     }
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (min-width: 320px) and (max-width: 769px) {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -126,7 +126,7 @@ export const ListSocialMedia = styled.ul`
     justify-content: center;
     padding: 0;
 
-    @media (min-width: 320px) and (max-width: 1024px) {
+    @media (min-width: 320px) and (max-width: 769px) {
         display: none;
     }
 `

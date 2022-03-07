@@ -9,6 +9,7 @@ export default class Animation {
         this.scene = new THREE.Scene()
 
         this.container = options.dom
+
         this.width = this.container.offsetWidth
         this.height = this.container.offsetHeight
         this.renderer = new THREE.WebGLRenderer()
@@ -28,16 +29,14 @@ export default class Animation {
             1,
             1000
         )
-
         this.camera.position.set(0, 0, 4)
         this.scene.add(this.camera)
 
+        this.time = 0
         this.mouse = new THREE.Vector2(0, 0)
         this.prevMouse = new THREE.Vector2(0, 0)
 
         this.currentWave = 0
-
-        this.time = 0
         this.isPlaying = true
 
         this.mouseEvents()
@@ -86,9 +85,8 @@ export default class Animation {
         })
     }
 
-    addObject() {
+    addObjects() {
         let that = this
-
         //Setup shader material
         this.material = new THREE.ShaderMaterial({
             extensions: {
@@ -109,6 +107,7 @@ export default class Animation {
 
         //Setup geometry
         this.geometry = new THREE.PlaneBufferGeometry(64, 64, 1, 1)
+
         this.meshes = []
 
         for (let i = 0; i < this.max; i++) {
@@ -116,15 +115,14 @@ export default class Animation {
                 map: new THREE.TextureLoader().load(blue),
                 transparent: true,
                 blending: THREE.AdditiveBlending,
-                depthTest: true,
-                depthWrite: true,
+                depthTest: false,
+                depthWrite: false,
             })
 
             //Setup a mesh
             let mesh = new THREE.Mesh(this.geometry, m)
-            //mesh.visible = false;
+            mesh.visible = false
             mesh.rotation.z = 2 * Math.PI * Math.random()
-
             this.scene.add(mesh)
             this.meshes.push(mesh)
         }
@@ -136,8 +134,8 @@ export default class Animation {
 
     play() {
         if (!this.isPlaying) {
-            this.render()
             this.isPlaying = true
+            this.render()
         }
     }
 
@@ -160,31 +158,26 @@ export default class Animation {
             this.setNewWave(this.mouse.x, this.mouse.y, this.currentWave)
             this.currentWave = (this.currentWave + 1) % this.max
         }
-
         this.prevMouse.x = this.mouse.x
         this.prevMouse.y = this.mouse.y
     }
 
     render() {
         this.trackMousePosition()
-        //Iteration of time for animation
         if (!this.isPlaying) return
         this.time += 0.05
         this.material.uniforms.time.value = this.time
-
-        //render of scene
-        this.renderer.render(this.scene, this.camera)
-        //Synchronize a render to the animation
         requestAnimationFrame(this.render.bind(this))
+
+        this.renderer.render(this.scene, this.camera)
 
         this.meshes.forEach((mesh) => {
             if (mesh.visible) {
-                mesh.rotation.z += 0.002
+                mesh.rotation.z += 0.02
                 mesh.material.opacity *= 0.96
 
-                mesh.scale.x = 0.955 * mesh.scale.x + 0.168
+                mesh.scale.x = 0.982 * mesh.scale.x + 0.108
                 mesh.scale.y = mesh.scale.x
-
                 if (mesh.material.opacity < 0.002) {
                     mesh.visible = false
                 }

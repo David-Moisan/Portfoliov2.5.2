@@ -8,15 +8,14 @@ import {
 } from '../utils/style/LoadingDataStyle'
 import { Container, SectionFull } from '../utils/style/GlobalSection'
 import {
-    DetailPageHeader,
     BackBtn,
     DetailHeader,
-    DetailTitle,
-    DetailDate,
     DetailWrapper,
     DetailLink,
     DetailInfo,
     DetailImage,
+    DetailContent,
+    DetailImageWrapper,
 } from '../components/DetailsTopic/DetailAllTopic'
 
 /**
@@ -57,35 +56,37 @@ export default function DetailProjectPage() {
     return (
         <Container>
             <SectionFull>
-                <DetailPageHeader>
-                    <BackBtn>
-                        <Link to="/">Back</Link>
-                    </BackBtn>
-                </DetailPageHeader>
+                <BackBtn>
+                    <Link to="/project">Back</Link>
+                </BackBtn>
                 <DetailWrapper>
-                    <DetailHeader>
-                        <DetailTitle>{project.title}</DetailTitle>
-                        <DetailDate>
-                            {project.day} - {project.month}
-                        </DetailDate>
-                        <DetailLink>
-                            <a target="_blank" href={project.link}>
-                                <i
-                                    className="fa fa-github fa-2x"
-                                    aria-hidden="true"
-                                ></i>
-                            </a>
-                        </DetailLink>
-                    </DetailHeader>
-                    <DetailInfo>
-                        <div
-                            className="case__content"
-                            dangerouslySetInnerHTML={createProject()}
-                        />
-                        <DetailImage>
-                            <img src={project.thumbnails} alt={project.title} />
-                        </DetailImage>
-                    </DetailInfo>
+                    <DetailContent>
+                        <DetailHeader>
+                            <h1>{project.title}</h1>
+                            <DetailLink>
+                                <a target="_blank" href={project.link}>
+                                    <i
+                                        className="fa fa-github fa-2x"
+                                        aria-hidden="true"
+                                    ></i>
+                                </a>
+                            </DetailLink>
+                        </DetailHeader>
+                        <DetailInfo>
+                            <div
+                                className="detail__content"
+                                dangerouslySetInnerHTML={createProject()}
+                            />
+                            <DetailImage>
+                                <DetailImageWrapper>
+                                    <img
+                                        src={project.thumbnails}
+                                        alt={project.title}
+                                    />
+                                </DetailImageWrapper>
+                            </DetailImage>
+                        </DetailInfo>
+                    </DetailContent>
                 </DetailWrapper>
             </SectionFull>
         </Container>

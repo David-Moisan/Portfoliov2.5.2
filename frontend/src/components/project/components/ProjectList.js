@@ -48,9 +48,9 @@ export default function ProjectList(props) {
                     <AnimLetter letter="s" />
                 </Title>
                 <MainProjectContainer>
-                    {props.project.map((project, index) => (
-                        <ProjectWrapper>
-                            <ProjectContent key={index} id={project.id}>
+                    {props.project.map((project) => (
+                        <ProjectWrapper key={project.id}>
+                            <ProjectContent>
                                 <ProjectDetail>
                                     <ProjectDetailContainer>
                                         <ProjectTitle>
@@ -83,24 +83,26 @@ export default function ProjectList(props) {
                                         </ProjectLink>
                                     </ProjectDetailContainer>
                                 </ProjectDetail>
+                                <ProjectPreview>
+                                    <ProjectImageWrapper>
+                                        <img
+                                            src={project.thumbnails}
+                                            alt={project.title}
+                                        />
+                                    </ProjectImageWrapper>
+                                    <ProjectTechTag>
+                                        <ProjectTechList>
+                                            {project.languages.map(
+                                                (lang, index) => (
+                                                    <li key={index}>
+                                                        {lang.name}
+                                                    </li>
+                                                )
+                                            )}
+                                        </ProjectTechList>
+                                    </ProjectTechTag>
+                                </ProjectPreview>
                             </ProjectContent>
-                            <ProjectPreview>
-                                <ProjectImageWrapper>
-                                    <img
-                                        src={project.thumbnails}
-                                        alt={project.title}
-                                    />
-                                </ProjectImageWrapper>
-                                <ProjectTechTag>
-                                    <ProjectTechList>
-                                        {project.languages.map(
-                                            (lang, index) => (
-                                                <li key={index}>{lang.name}</li>
-                                            )
-                                        )}
-                                    </ProjectTechList>
-                                </ProjectTechTag>
-                            </ProjectPreview>
                         </ProjectWrapper>
                     ))}
                 </MainProjectContainer>

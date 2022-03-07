@@ -2,10 +2,11 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {
     BackBtn,
+    DetailContent,
     DetailHeader,
     DetailImage,
+    DetailImageWrapper,
     DetailInfo,
-    DetailPageHeader,
     DetailTitle,
     DetailWrapper,
 } from '../components/DetailsTopic/DetailAllTopic'
@@ -58,17 +59,14 @@ export default function DetailBlogPostPage() {
     return (
         <Container>
             <SectionFull>
-                <DetailPageHeader>
-                    <BackBtn>
-                        <Link to="/">Back</Link>
-                    </BackBtn>
-                </DetailPageHeader>
+                <BackBtn>
+                    <Link to="/">Back</Link>
+                </BackBtn>
                 <DetailWrapper>
-                    <DetailHeader>
-                        <DetailTitle>
+                    <DetailContent>
+                        <DetailHeader>
                             <h1>{blog.title}</h1>
                             <div
-                                className="detail__blog--category"
                                 style={{
                                     color: blog.category.map(
                                         (item) => item.color
@@ -77,17 +75,22 @@ export default function DetailBlogPostPage() {
                             >
                                 {blog.category.map((item) => item.name)}
                             </div>
-                        </DetailTitle>
-                    </DetailHeader>
-                    <DetailInfo>
-                        <aside
-                            className="blog__content"
-                            dangerouslySetInnerHTML={createBlog()}
-                        />
-                        <DetailImage>
-                            <img src={blog.thumbnails} alt={blog.title} />
-                        </DetailImage>
-                    </DetailInfo>
+                        </DetailHeader>
+                        <DetailInfo>
+                            <div
+                                className="detail__content"
+                                dangerouslySetInnerHTML={createBlog()}
+                            />
+                            <DetailImage>
+                                <DetailImageWrapper>
+                                    <img
+                                        src={blog.thumbnails}
+                                        alt={blog.title}
+                                    />
+                                </DetailImageWrapper>
+                            </DetailImage>
+                        </DetailInfo>
+                    </DetailContent>
                 </DetailWrapper>
             </SectionFull>
         </Container>
