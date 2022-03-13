@@ -17,14 +17,16 @@ import {
 } from '../components/AnimLetter/AnimLetterStyle'
 import Button from '../components/Button/Button'
 import ScrollDown from '../components/ScrollDown/ScrollDown'
+import HomeAnimation from '../components/Home/HomeAnimation'
+
 /**
- * ! Refactoring: Mettre en cache l'animation ? via le Singleton Design Pattern
  * Home Page me permet d'afficher tous les componsants qui doivent être présent sur ma page d'accueil
  */
 export default class HomePage extends Component {
     render() {
         return (
             <Container>
+                <HomeAnimation />
                 <SectionFull>
                     <HomeContainer>
                         <HomeWrapper data-aos="fade-down">
