@@ -65,9 +65,7 @@ export default function BlogPresentation() {
                                         </Link>
                                     </h5>
                                 </BlogTitle>
-                                <div className="blog__post--description">
-                                    {article.description}
-                                </div>
+                                <div>{article.description}</div>
                             </BlogContent>
                         </BlogPost>
                     ))}

@@ -48,13 +48,8 @@ export default function ListBlogPost(props) {
                                         </Link>
                                     </h5>
                                 </BlogTitle>
-                                <div className="blog__post--content">
-                                    {blog.description}
-                                </div>
-                                <BlogImgContainer
-                                    to={`/blog/${blog.slug}`}
-                                    className="blog__post--thumbnails"
-                                >
+                                <div>{blog.description}</div>
+                                <BlogImgContainer to={`/blog/${blog.slug}`}>
                                     <img
                                         src={blog.thumbnails}
                                         alt={blog.title}
