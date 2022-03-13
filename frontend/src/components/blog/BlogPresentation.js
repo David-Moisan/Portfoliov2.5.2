@@ -39,27 +39,22 @@ export default function BlogPresentation() {
                         <BlogPost
                             key={article.id}
                             style={{
-                                borderTop: `2px solid ${blogArticles.map(
-                                    (article) =>
-                                        article.category.map(
-                                            (category) => category.color
-                                        )
-                                )}`,
+                                borderTop:
+                                    '2px solid' +
+                                    article.category.map(
+                                        (category) => category.color
+                                    ),
                             }}
                         >
                             <BlogCategory
                                 style={{
-                                    color: `${blogArticles.map((article) =>
-                                        article.category.map(
-                                            (category) => category.color
-                                        )
-                                    )}`,
+                                    color: article.category.map(
+                                        (category) => category.color
+                                    ),
                                 }}
                             >
-                                {blogArticles.map((article) =>
-                                    article.category.map(
-                                        (category) => category.name
-                                    )
+                                {article.category.map(
+                                    (category) => category.name
                                 )}
                             </BlogCategory>
                             <BlogContent>

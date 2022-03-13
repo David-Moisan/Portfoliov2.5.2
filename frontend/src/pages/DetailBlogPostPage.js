@@ -60,21 +60,17 @@ export default function DetailBlogPostPage() {
         <Container>
             <SectionFull>
                 <BackBtn>
-                    <Link to="/">Back</Link>
+                    <Link to="/blog">Back</Link>
                 </BackBtn>
                 <DetailWrapper>
                     <DetailContent>
                         <DetailHeader>
                             <h1>{blog.title}</h1>
-                            <div
-                                style={{
-                                    color: blog.category.map(
-                                        (item) => item.color
-                                    ),
-                                }}
-                            >
-                                {blog.category.map((item) => item.name)}
-                            </div>
+                            {blog.category.map((item) => (
+                                <div style={{ color: item.color }}>
+                                    {item.name}
+                                </div>
+                            ))}
                         </DetailHeader>
                         <DetailInfo>
                             <div
