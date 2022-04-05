@@ -2,8 +2,8 @@
 
 <h1 align="center">Portfoliov2.5.2</h1>
 
-La dernière version de mon portfolio, présente mon parcours, mes différents projets réalisés, ainsi que les articles de blog que j'écris différents sujets :
-- des outils de
+La dernière version de mon portfolio, présente mon parcours, mes différents projets réalisés, ainsi que les articles de blog sur différents sujets :
+- des outils
 - Des expériences personnelles
 - Du contenu web et de programmation en général
 
