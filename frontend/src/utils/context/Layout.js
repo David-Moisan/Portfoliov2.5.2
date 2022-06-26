@@ -13,7 +13,6 @@ export default class Layout extends Component {
         super(props)
         this.state = { loading: true }
     }
-
     componentDidMount() {
         setTimeout(() => {
             this.setState({
@@ -21,7 +20,6 @@ export default class Layout extends Component {
             })
         }, 5000)
     }
-
     render() {
         if (this.state.loading) {
             return <Loading />

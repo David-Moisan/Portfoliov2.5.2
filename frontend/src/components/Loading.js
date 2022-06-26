@@ -43,8 +43,8 @@ const LoadinWrapper = styled.div`
 `
 
 /**
- * Loading
- * @returns Le loader de l'accueil
+ * It returns a div with a logo and a loading animation.
+ * @returns A React component.
  */
 const Loading = () => {
     return (

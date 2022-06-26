@@ -13,11 +13,11 @@ import {
     MobileIcons,
     ListSocialMedia,
     LinkSocialMedia,
+    LanguageChangeContainer,
 } from './NavbarStyle'
 
 /**
  * Navbar
- * !Refactoring: Rassembler le fichier menu et Navbar ?
  * @returns la navbar + le Menu
  */
 export default function Navbar() {
@@ -100,6 +100,16 @@ export default function Navbar() {
                     </LinkSocialMedia>
                 </li>
             </ListSocialMedia>
+            {/* <LanguageChangeContainer>
+                <select
+                    className="custom-select"
+                    value={props.language}
+                    onChange={(e) => props.handleSetLanguage(e.target.value)}
+                >
+                    <option value="English">English</option>
+                    <option value="Français">Français</option>
+                </select>
+            </LanguageChangeContainer> */}
         </Container>
     )
 }

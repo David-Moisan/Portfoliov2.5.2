@@ -122,7 +122,6 @@ export const MobileIcons = styled.i`
 export const ListSocialMedia = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    height: 20rem;
     justify-content: center;
     padding: 0;
 
@@ -130,6 +129,14 @@ export const ListSocialMedia = styled.ul`
         display: none;
     }
 `
+
+// export const LanguageChangeContainer = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 2.13rem;
+// `
 
 export const LinkSocialMedia = styled.a`
     padding: 0.21rem 0.55rem;
