@@ -8,7 +8,7 @@ import { Scroll } from './ScrollDownStyle'
 export default function ScrollDown() {
     return (
         <Scroll>
-            <span>scroll down</span>
+            <span>scroll</span>
             <i className="fa fa-arrow-down" aria-hidden="true"></i>
         </Scroll>
     )

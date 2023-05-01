@@ -1,5 +1,5 @@
 /*@David-Moisan*/
-/**refactoring 02/03/22 */
+/**refactoring 01/05/23 */
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
@@ -13,7 +13,6 @@ import {
     MobileIcons,
     ListSocialMedia,
     LinkSocialMedia,
-    LanguageChangeContainer,
 } from './NavbarStyle'
 
 /**
@@ -30,38 +29,38 @@ export default function Navbar() {
                     <img rel="preload" src={Logo} alt="logo" />
                     <span>David</span>
                 </HomeLink>
-                <span>Full-stack Developer</span>
+                <span>Full-stack Développeur</span>
             </TopNavbar>
             <Menu>
-                <NavLink to="/project" title="My Project">
+                <NavLink to="/project" title="Mes projets">
                     {isTablet ? (
                         <MobileIcons
                             className="fa fa-code"
                             aria-hidden="true"
                         ></MobileIcons>
                     ) : (
-                        'Project'
+                        'Mes Projets'
                     )}
                 </NavLink>
-                <NavLink to="/about" title="About me">
+                <NavLink to="/about" title="À propos">
                     {isTablet ? (
                         <MobileIcons
                             className="fa fa-user"
                             aria-hidden="true"
                         ></MobileIcons>
                     ) : (
-                        'About'
+                        'À propos'
                     )}
                 </NavLink>
                 {isTablet ? (
-                    <NavLink to="/" title="Home">
+                    <NavLink to="/" title="Accueil">
                         <MobileIcons
                             className="fa fa-home"
                             aria-hidden="true"
                         ></MobileIcons>
                     </NavLink>
                 ) : null}
-                <NavLink to="/blog" title="Blog Posts">
+                <NavLink to="/blog" title="Articles de blog">
                     {isTablet ? (
                         <MobileIcons
                             className="fa fa-newspaper-o"
@@ -71,14 +70,14 @@ export default function Navbar() {
                         'Blog'
                     )}
                 </NavLink>
-                <NavLink to="/contact" title="Contact me">
+                <NavLink to="/contact" title="Me joindre">
                     {isTablet ? (
                         <MobileIcons
                             className="fa fa-paper-plane"
                             aria-hidden="true"
                         ></MobileIcons>
                     ) : (
-                        'Contact'
+                        'Contactez-moi'
                     )}
                 </NavLink>
             </Menu>
@@ -108,16 +107,6 @@ export default function Navbar() {
                     </LinkSocialMedia>
                 </li>
             </ListSocialMedia>
-            {/* <LanguageChangeContainer>
-                <select
-                    className="custom-select"
-                    value={props.language}
-                    onChange={(e) => props.handleSetLanguage(e.target.value)}
-                >
-                    <option value="English">English</option>
-                    <option value="Français">Français</option>
-                </select>
-            </LanguageChangeContainer> */}
         </Container>
     )
 }

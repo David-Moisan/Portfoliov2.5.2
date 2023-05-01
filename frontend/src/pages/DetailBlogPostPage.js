@@ -7,7 +7,6 @@ import {
     DetailImage,
     DetailImageWrapper,
     DetailInfo,
-    DetailTitle,
     DetailWrapper,
 } from '../components/DetailsTopic/DetailAllTopic'
 import { useFetch } from '../utils/hooks'
@@ -40,7 +39,7 @@ export default function DetailBlogPostPage() {
         return (
             <SectionFull>
                 <ErrorWrapper>
-                    <div>This article don't exist !</div>
+                    <div>Cet article n'existe pas !</div>
                     <CrossError className="fa fa-times" aria-hidden="true" />
                 </ErrorWrapper>
             </SectionFull>
@@ -60,7 +59,7 @@ export default function DetailBlogPostPage() {
         <Container>
             <SectionFull>
                 <BackBtn>
-                    <Link to="/blog">Back</Link>
+                    <Link to="/blog">Retour</Link>
                 </BackBtn>
                 <DetailWrapper>
                     <DetailContent>

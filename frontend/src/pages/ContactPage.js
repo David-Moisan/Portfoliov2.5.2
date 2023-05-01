@@ -31,19 +31,16 @@ export default function ContactPage() {
                                 <AnimLetter letter="a" />
                                 <AnimLetter letter="c" />
                                 <AnimLetter letter="t" />
-                                <AnimationSpace />
-                                <AnimLetter letter="m" />
-                                <AnimLetter letter="e" />
                             </Title>
                             <ContactContent>
-                                I'm available immediately for any kind of web
-                                development || full stack mission. Do not
-                                hesitate to contact me.
+                                Je suis disponible immédiatement pour tout type
+                                de mission de développement web. N'hésitez pas à
+                                me contacter.
                             </ContactContent>
                         </header>
                         <div>
                             <ButtonAction href="mailto:admin@davprocode.com">
-                                Send !
+                                Envoyer !
                             </ButtonAction>
                         </div>
                     </ContactWrapper>

@@ -24,42 +24,44 @@ export default function AboutPage() {
                     <AboutTextWrapper data-aos="fade-right">
                         <header>
                             <Title>
-                                <AnimLetter letter="M" />
-                                <AnimLetter letter="y" />
+                                <AnimLetter letter="À" />
                                 <AnimationSpace />
-                                <AnimLetter letter="S" />
-                                <AnimLetter letter="t" />
-                                <AnimLetter letter="o" />
+                                <AnimLetter letter="P" />
                                 <AnimLetter letter="r" />
-                                <AnimLetter letter="y" />
+                                <AnimLetter letter="o" />
+                                <AnimLetter letter="p" />
+                                <AnimLetter letter="o" />
+                                <AnimLetter letter="s" />
                             </Title>
                             <AboutText>
-                                After a career in the French army as a
-                                paratrooper, I decided to convert to the field
-                                of web development in 2020. So I resumed my
-                                studies with the WIS school in Toulouse to
-                                validate a BTS DWWM as well as a Project Manager
-                                License. I started a Master's degree in Computer
-                                Engineering in 2022 for a two-year work-study
-                                period, after having found a work-study program
-                                in the banking sector, I had a proposal for a
-                                permanent contract in the field of Insurance,
-                                which I immediately accepted. Indeed, living
-                                from my passion was my goal since the beginning
-                                of my retraining. So I stopped my Master in the
-                                course of the first year without validating it.
-                                And it's therefore in the field of insurance
-                                that I take up arms again, but this time sitting
-                                on an office chair in order to manage the EDI
-                                flows of a company wich generates millions in
-                                turnover. Here I'm finally full stack Web
-                                Developer in a technology that I particularity
-                                like PHP.
+                                Après une carrière dans l'armée française en
+                                tant que parachutiste, j'ai décidé de me
+                                reconvertir dans le domaine du développement web
+                                en 2020. J'ai donc repris mes études avec
+                                l'école WIS de Toulouse pour valider un BTS DWWM
+                                ainsi qu'une Licence Chef de Projet. J'ai
+                                commencé un Master en Ingénierie Informatique en
+                                2022 pour une alternance de deux ans, après
+                                avoir trouvé une alternance dans le secteur
+                                bancaire, j'ai eu une proposition de CDI dans le
+                                domaine de l'Assurance, que j'ai immédiatement
+                                accepté. En effet, vivre de ma passion était mon
+                                objectif depuis le début de ma reconversion.
+                                J'ai donc arrêté mon Master en cours de première
+                                année sans le valider. Et c'est donc dans le
+                                domaine de l'assurance que je reprends les
+                                armes, mais cette fois assis sur une chaise de
+                                bureau afin de gérer les flux EDI d'une
+                                entreprise qui génère des millions de chiffre
+                                d'affaires. Me voilà enfin Développeur Web full
+                                stack dans une technologie que je privilégie
+                                comme PHP.
                             </AboutText>
                             <AboutText>
-                                Since I discovered IT development, I have never
-                                stopped learning every day, driven by curiosity
-                                and a growing passion.
+                                Depuis que j'ai découvert le développement
+                                informatique, je n'ai jamais cessé d'apprendre
+                                chaque jour, poussé par la curiosité et une
+                                passion grandissante.
                             </AboutText>
                         </header>
                     </AboutTextWrapper>

@@ -130,14 +130,6 @@ export const ListSocialMedia = styled.ul`
     }
 `
 
-// export const LanguageChangeContainer = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     margin-top: 2.13rem;
-// `
-
 export const LinkSocialMedia = styled.a`
     padding: 0.21rem 0.55rem;
     & > i {

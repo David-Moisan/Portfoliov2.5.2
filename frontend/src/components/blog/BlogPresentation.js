@@ -71,7 +71,7 @@ export default function BlogPresentation() {
                     ))}
             </BlogWrapper>
             <BlogFooter>
-                <Link to="/blog">Read more articles</Link>
+                <Link to="/blog">Lire plus d'articles</Link>
             </BlogFooter>
         </SectionFull>
     )

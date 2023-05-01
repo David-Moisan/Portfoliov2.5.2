@@ -16,7 +16,6 @@ import Map from '../../../static/source/map.png'
 
 /**
  * Contact
- * ! Refactoring: Rassembler le fichier Map et Contact
  * @returns l'ensemble du composant Contact
  */
 export default function Contact() {
@@ -34,14 +33,11 @@ export default function Contact() {
                             <AnimLetter letter="a" />
                             <AnimLetter letter="c" />
                             <AnimLetter letter="t" />
-                            <AnimationSpace />
-                            <AnimLetter letter="m" />
-                            <AnimLetter letter="e" />
                         </Title>
                         <ContactContent>
-                            I'm available immediately for any kind of web
-                            development || full stack mission. Do not hesitate
-                            to contact me.
+                            Je suis disponible immédiatement pour tout type de
+                            mission de développement web. N'hésitez pas à me
+                            contacter.
                         </ContactContent>
                     </header>
                     <div>

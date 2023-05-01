@@ -57,7 +57,7 @@ export default function DetailProjectPage() {
         <Container>
             <SectionFull>
                 <BackBtn>
-                    <Link to="/project">Back</Link>
+                    <Link to="/project">Retour</Link>
                 </BackBtn>
                 <DetailWrapper>
                     <DetailContent>

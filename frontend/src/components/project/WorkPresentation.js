@@ -50,29 +50,28 @@ export default function WorkPresentation() {
                     <WorkHeader>
                         <Title>
                             <AnimLetter letter="M" />
-                            <AnimLetter letter="y" />
+                            <AnimLetter letter="o" />
+                            <AnimLetter letter="n" />
                             <AnimationSpace />
-                            <AnimLetter letter="P" />
-                            <AnimLetter letter="o" />
+                            <AnimLetter letter="T" />
                             <AnimLetter letter="r" />
-                            <AnimLetter letter="t" />
-                            <AnimLetter letter="f" />
-                            <AnimLetter letter="o" />
-                            <AnimLetter letter="l" />
+                            <AnimLetter letter="a" />
+                            <AnimLetter letter="v" />
+                            <AnimLetter letter="a" />
                             <AnimLetter letter="i" />
-                            <AnimLetter letter="o" />
+                            <AnimLetter letter="l" />
                         </Title>
                         <WorkDescription>
-                            Here is a small gallery of projects that I carried
-                            out during my retraining, or in my personal time.{' '}
-                            <br />
-                            Are you interested? go see{' '}
-                            <WorkLink to="/project">my work</WorkLink>{' '}
+                            Voici une petite galerie de projets que j'ai
+                            réalisés pendant ma reconversion, ou sur mon temps
+                            libre. <br />
+                            Es-tu intéressé ? Va voir{' '}
+                            <WorkLink to="/project">mon travail</WorkLink>{' '}
                         </WorkDescription>
                     </WorkHeader>
                 </div>
                 <div>
-                    <Button route="/project" text="See more !" />
+                    <Button route="/project" text="Voir plus !" />
                 </div>
             </WorkWrapper>
             <MainProjectContainer>
@@ -89,7 +88,7 @@ export default function WorkPresentation() {
                                         <ProjectLinkBtn
                                             to={`/project/${project.id}`}
                                         >
-                                            Case study
+                                            Voir détails
                                         </ProjectLinkBtn>
                                         <ProjectBlankLinkBtn
                                             href={project.link}

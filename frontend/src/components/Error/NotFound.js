@@ -7,7 +7,7 @@ export default function NotFound() {
     return (
         <SectionFull>
             <ErrorContainer>
-                <ErrorTitle>What are you doing here ?</ErrorTitle>
+                <ErrorTitle>Que faites-vous ici ?</ErrorTitle>
                 <ErrorImg src={Badge} alt="404Error" />
             </ErrorContainer>
         </SectionFull>

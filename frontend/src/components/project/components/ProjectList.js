@@ -34,16 +34,20 @@ export default function ProjectList(props) {
         <Container>
             <SectionFull>
                 <Title style={{ textAlign: 'center' }}>
-                    <AnimLetter letter="A" />
+                    <AnimLetter letter="T" />
+                    <AnimLetter letter="o" />
+                    <AnimLetter letter="u" />
+                    <AnimLetter letter="s" />
+                    <AnimationSpace />
                     <AnimLetter letter="l" />
-                    <AnimLetter letter="l" />
+                    <AnimLetter letter="e" />
+                    <AnimLetter letter="s" />
                     <AnimationSpace />
                     <AnimLetter letter="p" />
                     <AnimLetter letter="r" />
                     <AnimLetter letter="o" />
                     <AnimLetter letter="j" />
                     <AnimLetter letter="e" />
-                    <AnimLetter letter="c" />
                     <AnimLetter letter="t" />
                     <AnimLetter letter="s" />
                 </Title>
@@ -63,7 +67,7 @@ export default function ProjectList(props) {
                                             <ProjectLinkBtn
                                                 to={`/project/${project.id}`}
                                             >
-                                                Case study
+                                                Voir détails
                                             </ProjectLinkBtn>
 
                                             <ProjectBlankLinkBtn

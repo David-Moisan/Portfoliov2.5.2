@@ -31,13 +31,20 @@ export default class HomePage extends Component {
                     <HomeContainer>
                         <HomeWrapper data-aos="fade-down">
                             <HomeTitle>
-                                <AnimLetter letter="H" />
-                                <AnimLetter letter="i" />
+                                <AnimLetter letter="S" />
+                                <AnimLetter letter="a" />
+                                <AnimLetter letter="l" />
+                                <AnimLetter letter="u" />
+                                <AnimLetter letter="t" />
                                 <AnimLetter letter="," />
                                 <br />
-                                <AnimLetter letter="I" />
-                                <AnimLetter letter="'" />
-                                <AnimLetter letter="m" />
+                                <AnimLetter letter="J" />
+                                <AnimLetter letter="e" />
+                                <AnimationSpace />
+                                <AnimLetter letter="s" />
+                                <AnimLetter letter="u" />
+                                <AnimLetter letter="i" />
+                                <AnimLetter letter="s" />
                                 <AnimationSpace />
                                 <ColorLetter>D</ColorLetter>
                                 <AnimLetter letter="a" />
@@ -46,22 +53,20 @@ export default class HomePage extends Component {
                                 <AnimLetter letter="d" />
                                 <AnimLetter letter="," />
                                 <br />
-                                <AnimLetter letter="w" />
-                                <AnimLetter letter="e" />
-                                <AnimLetter letter="b" />
-                                <AnimationSpace />
                                 <AnimLetter letter="d" />
-                                <AnimLetter letter="e" />
+                                <AnimLetter letter="é" />
                                 <AnimLetter letter="v" />
                                 <AnimLetter letter="e" />
                                 <AnimLetter letter="l" />
                                 <AnimLetter letter="o" />
                                 <AnimLetter letter="p" />
+                                <AnimLetter letter="p" />
                                 <AnimLetter letter="e" />
+                                <AnimLetter letter="u" />
                                 <AnimLetter letter="r" />
                             </HomeTitle>
-                            <HomeSubtitle>Full Stack Developer</HomeSubtitle>
-                            <Button route="/contact" text="Contact me" />
+                            <HomeSubtitle>Développeur Full-stack</HomeSubtitle>
+                            <Button route="/contact" text="Contactez-moi" />
                         </HomeWrapper>
                         <ScrollDown />
                     </HomeContainer>
