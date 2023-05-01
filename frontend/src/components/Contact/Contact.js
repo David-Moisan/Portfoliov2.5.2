@@ -41,7 +41,7 @@ export default function Contact() {
                         <ContactContent>
                             I'm available immediately for any kind of web
                             development || full stack mission. Do not hesitate
-                            to contact me via this contact form.
+                            to contact me.
                         </ContactContent>
                     </header>
                     <div>
