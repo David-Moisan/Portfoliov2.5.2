@@ -30,7 +30,7 @@ export default function Navbar() {
                     <img rel="preload" src={Logo} alt="logo" />
                     <span>David</span>
                 </HomeLink>
-                <span>Web developer</span>
+                <span>Full-stack Developer</span>
             </TopNavbar>
             <Menu>
                 <NavLink to="/project" title="My Project">
@@ -97,6 +97,14 @@ export default function Navbar() {
                         target="_blank"
                     >
                         <i className="fa fa-linkedin" aria-hidden="true"></i>
+                    </LinkSocialMedia>
+                </li>
+                <li>
+                    <LinkSocialMedia
+                        href="https://twitter.com/phi__code"
+                        target="_blank"
+                    >
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
                     </LinkSocialMedia>
                 </li>
             </ListSocialMedia>
