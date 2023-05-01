@@ -9,6 +9,31 @@ La dernière version de mon portfolio, présente mon parcours, mes différents p
 
 Je partage avec vous, mon quotidien de développeur junior.
 
+## Mise en route du projet 
+
+### Django REST Framework
+
+`.\env\\Scripts\\activate`
+
+Cette commande activera l'environment de développement
+
+### Django 
+
+Pour lancer le serveur Django effectuer cette commande
+
+`python .\manage.py runserver`
+
+Penser a bien allumer la base de données sinon le serveur ne pourra pas effectuer les migrations nécessaire.
+Environnement dev : MySQL
+
+### React.js
+
+Pour effectuer des changements directement sur le rendue client lancer la commande suivante
+
+`npm run dev`
+
+Les règles npm on était modifiés pour ajouter le flag --watch directement dans la commande "dev".
+
 ## Technologies
 
 - Python
